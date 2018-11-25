@@ -73,12 +73,18 @@
 		
 <!-- Layouts -->
 
-
-
-<!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css">
-<link rel="stylesheet" href="/css/typo.css">
-<!-- 文章页 -->
+    <!-- Tags Cloud -->
+    
+<link rel="stylesheet" href="/css/item.css">
+<style>
+    .row a{
+        border-bottom: none;
+    }
+    .special{
+        padding: 0;
+        padding: 2rem;
+    }
+</style>
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
     <div id="wrapper" class="fade-in">
@@ -142,44 +148,30 @@
     </ul>
     <a class="btn btn-default need-share-button" style="cursor:pointer">Share</a>
 </nav>
-
-        <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1543155295360&amp;di=a70527311fce54ab6f9fe56c461a7509&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Dfff7593c61600c33e474d68b72253b7a%2F8644ebf81a4c510f4d6d78326a59252dd42aa569.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Resume</h2></a>
-            </div>
-            <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
-                <h1 id="此处应该有简历"><a href="#此处应该有简历" class="headerlink" title="此处应该有简历"></a>此处应该有简历</h1>
-            </div>
-
-            <!-- Post Comments -->
-            
-    <!-- 使用 valine -->
-<div id="comment">
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#comment' ,
-        notify: true,
-        verify: false,
-        app_id: 'xfK5vt9FovxtkWckfTtpbvPQ-gzGzoHsz',
-        app_key: 'RBfR4fpP9DMDeqdGiQ4RQQaM',
-        placeholder: '大爷不来两句么? ヾ(=･ω･=)o',
-        pageSize: '10',
-        avatar: '',
-        avatar_cdn: 'https://gravatar.loli.net/avatar/'
-    });
-</script>
-</div>
-<style>
-   #comment{
-        padding: 2pc;
-    }
-</style>
-
-
+                <div id="main">
+            <!-- Main first s-->
+            <article id="me" class="panel">
+                <header style="color: #000000">
+                    <h1>Shotacon notes</h1>
+                    <p>Some code or nonsense</p>
+                </header>
+                <a href="" class="jumplink pic">
+                    <!-- <span class="arrow icon fa-chevron-right"><span></span></span> -->
+                    <img src="/images/me.jpg" alt="">
+                </a>
+            </article>
+            <!-- Main first e-->
         </div>
+
+        <section class="special">
+                            <div class="row" style="border-bottom: none;">
+
+        <a href="/tags/dbf/" style="font-size: 16px;">dbf</a> <a href="/tags/java/" style="font-size: 16px;">java</a>
+
+                            </div>
+                    
+        </section>
+
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -192,7 +184,6 @@
         </div>
     </div>
 </body>
-
 
 
  	
