@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -9,10 +18,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -38,10 +57,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
 
 
 
@@ -50,25 +65,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
@@ -78,8 +87,35 @@
 
 
 
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
-<meta name="description" content="Yo, what&apos;s up">
+
+  
+
+
+
+
+  <meta name="description" content="Yo, what&apos;s up">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shotacon">
 <meta property="og:url" content="http://yoursite.com/index.html">
@@ -92,29 +128,6 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
 
 
 
@@ -122,10 +135,15 @@
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Shotacon</title>
   
+
 
 
 
@@ -143,6 +161,35 @@
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
@@ -170,13 +217,11 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -184,65 +229,106 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            Archives
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            Categories
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            Tags
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            About
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -250,12 +336,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -268,6 +362,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -277,7 +373,7 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shotacon">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Yo, what's up">
       <meta itemprop="image" content="/images/logo.png">
     </span>
 
@@ -292,11 +388,20 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/23/java导出dbf格式文件/" itemprop="url">java导出dbf格式文件</a></h1>
+                
+                <a href="/2018/11/23/java导出dbf格式文件/" class="post-title-link" itemprop="http://yoursite.com/index.html">java导出dbf格式文件</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -304,13 +409,30 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-23T16:32:06+08:00">
-                2018-11-23
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-23 16:32:06" itemprop="dateCreated datePublished" datetime="2018-11-23T16:32:06+08:00">2018-11-23</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-12-02 21:59:45" itemprop="dateModified" datetime="2018-12-02T21:59:45+08:00">2018-12-02</time>
+              
             
           </span>
 
@@ -326,11 +448,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -346,13 +464,24 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/11/23/java导出dbf格式文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/23/java导出dbf格式文件/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/23/java导出dbf格式文件/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
+             <span id="/2018/11/23/java导出dbf格式文件/" class="leancloud_visitors" data-flag-title="java导出dbf格式文件">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -376,135 +505,35 @@
       
         
           
-            <h3 id="dbf文件相关属性"><a href="#dbf文件相关属性" class="headerlink" title="dbf文件相关属性"></a>dbf文件相关属性</h3><blockquote>
-<p>DBFField.FIELD_TYPE_D 表示Date型   </p>
-<p>DBFField.FIELD_TYPE_L 表示布尔型</p>
-<p>DBFField.FIELD_TYPE_N 表示数字       </p>
-<p>DBFField.FIELD_TYPE_C 表示字符串</p>
-<p>DBFField.FIELD_TYPE_F 表示浮点型   </p>
-<p>DBFField.FIELD_TYPE_M 不晓得,欢迎补充</p>
-</blockquote>
-<p>jar: <a href="https://pan.baidu.com/s/1J9vuPItrNlMs2x5MYVURsw" target="_blank" rel="noopener">https://pan.baidu.com/s/1J9vuPItrNlMs2x5MYVURsw</a></p>
-<h3 id="1-定义DBF文件字段"><a href="#1-定义DBF文件字段" class="headerlink" title="1. 定义DBF文件字段"></a>1. 定义DBF文件字段</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 字段数组</span>
-DBFField<span class="token punctuation">[</span><span class="token punctuation">]</span> fields <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DBFField</span><span class="token punctuation">[</span>列的个数<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 表头---数组</span>
-String<span class="token punctuation">[</span><span class="token punctuation">]</span> strutName <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span>列的个数<span class="token punctuation">]</span>
-<span class="token comment" spellcheck="true">// 数据类型 -- 数组</span>
-<span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strutType <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span>列的个数<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 设置名称</span>
-fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span>strutName<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 设置类型</span>
-fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setDataType</span><span class="token punctuation">(</span>strutType<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// 根据数据类型和数据本身指定数据长度(日期类型一般不指定长度)</span>
-fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setFieldLength</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 如果数据类型是浮点型 需要制定小数点位数 2 -->  0.00</span>
-fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setDecimalCount</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 如果数据类型是数值型不需要指定小数点位数, 会直接四舍五入</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-逐条的写入记录"><a href="#2-逐条的写入记录" class="headerlink" title="2. 逐条的写入记录"></a>2. 逐条的写入记录</h3><pre class="line-numbers language-java"><code class="language-java">Object<span class="token punctuation">[</span><span class="token punctuation">]</span> rowData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span>列的个数<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 如果要插入的数据是数字 但是为null  需要指定0 不可以使用空字符串和null</span>
-rowData<span class="token punctuation">[</span>z<span class="token punctuation">]</span> <span class="token operator">=</span> Double<span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span><span class="token string">"0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="3-输出文件"><a href="#3-输出文件" class="headerlink" title="3. 输出文件"></a>3. 输出文件</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 定义输出流，并关联的一个文件</span>
-<span class="token comment" spellcheck="true">// 这里需要注意的是,输出dbf是在已经存在的dbf文件中覆盖写入数据.所以在定义输出流的时候必须要指定一个存在dbf文件的路径并且指定名称.</span>
-File rootFile <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>Play<span class="token punctuation">.</span>applicationPath<span class="token punctuation">,</span> <span class="token string">"/public/download"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-OutputStream fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span>rootFile<span class="token punctuation">.</span><span class="token function">getPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>文件名称<span class="token punctuation">.</span>dbf<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// 定义 DBF输出对象</span>
-DBFWriter writer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DBFWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-writer<span class="token punctuation">.</span><span class="token function">setFields</span><span class="token punctuation">(</span>fields<span class="token punctuation">)</span><span class="token punctuation">;</span>
-writer<span class="token punctuation">.</span><span class="token function">addRecord</span><span class="token punctuation">(</span>rowData<span class="token punctuation">)</span><span class="token punctuation">;</span>
-writer<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>fos<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="4-代码参考"><a href="#4-代码参考" class="headerlink" title="4. 代码参考"></a>4. 代码参考</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 以下为系统中的代码, 仅供参考</span>
-<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">outputDBF</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>PropertyFilter<span class="token operator">></span> propertyFilterList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        OutputStream fos <span class="token operator">=</span> null<span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            List<span class="token operator">&lt;</span>Object<span class="token operator">></span> query <span class="token operator">=</span> departinvoicesManagerDao<span class="token punctuation">.</span><span class="token function">queryDBFinfo</span><span class="token punctuation">(</span>propertyFilterList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            String dbfName <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"结算单管理.dbf"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            StringBuffer sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> strutName <span class="token operator">=</span> sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"JSRS,JSRQ,JSDH,GSDM,DWDM,DWMC,CH,JPSR,JSSR,XLF,TPF,CC,FJF,GLQF,RYFJF"</span><span class="token punctuation">)</span>
-                    <span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strutType <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            strutType<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_N<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// JSRS</span>
-            strutType<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_D<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// JSRQ</span>
-            strutType<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_C<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// JSDH</span>
-            strutType<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_C<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// GSDM</span>
-            strutType<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_C<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// DWDM</span>
-            strutType<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_C<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// DWMC</span>
-            strutType<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_C<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// CH</span>
-            strutType<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// JPSR</span>
-            strutType<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// JSSR</span>
-            strutType<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// XLF</span>
-            strutType<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// TPF</span>
-            strutType<span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_C<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// CC</span>
-            strutType<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// FJF</span>
-            strutType<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// GLQF</span>
-            strutType<span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">]</span> <span class="token operator">=</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// RYFJF</span>
-            <span class="token comment" spellcheck="true">// 定义DBF文件字段</span>
-            DBFField<span class="token punctuation">[</span><span class="token punctuation">]</span> fields <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DBFField</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">14</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DBFField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span>strutName<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setDataType</span><span class="token punctuation">(</span>strutType<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">// Date类型不能设置字段长度，这里没有处理其它没有字段长度的类型</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>strutType<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_C<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setFieldLength</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>strutType<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_N<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setFieldLength</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>strutType<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setFieldLength</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    fields<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setDecimalCount</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            DBFWriter writer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DBFWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            writer<span class="token punctuation">.</span><span class="token function">setFields</span><span class="token punctuation">(</span>fields<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 一条条的写入记录</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> query<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                Object<span class="token punctuation">[</span><span class="token punctuation">]</span> object <span class="token operator">=</span> <span class="token punctuation">(</span>Object<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> query<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                Object<span class="token punctuation">[</span><span class="token punctuation">]</span> rowData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> z <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> z <span class="token operator">&lt;</span> <span class="token number">15</span><span class="token punctuation">;</span> z<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>fields<span class="token punctuation">[</span>z<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getDataType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_N <span class="token operator">||</span> fields<span class="token punctuation">[</span>z<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getDataType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> DBFField<span class="token punctuation">.</span>FIELD_TYPE_F<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token keyword">if</span> <span class="token punctuation">(</span>object<span class="token punctuation">[</span>z<span class="token punctuation">]</span> <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                            rowData<span class="token punctuation">[</span>z<span class="token punctuation">]</span> <span class="token operator">=</span> Double<span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span>object<span class="token punctuation">[</span>z<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                            rowData<span class="token punctuation">[</span>z<span class="token punctuation">]</span> <span class="token operator">=</span> Double<span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span><span class="token string">"0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                        <span class="token punctuation">}</span>
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                        rowData<span class="token punctuation">[</span>z<span class="token punctuation">]</span> <span class="token operator">=</span> object<span class="token punctuation">[</span>z<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
-                writer<span class="token punctuation">.</span><span class="token function">addRecord</span><span class="token punctuation">(</span>rowData<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token comment" spellcheck="true">// 定义输出流，并关联的一个文件</span>
-            File rootFile <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>Play<span class="token punctuation">.</span>applicationPath<span class="token punctuation">,</span> <span class="token string">"/public/download"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span>rootFile<span class="token punctuation">.</span><span class="token function">getPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"\\"</span> <span class="token operator">+</span> dbfName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// 写入数据</span>
-            writer<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>fos<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
-            <span class="token keyword">try</span> <span class="token punctuation">{</span>
-                fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>     
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+          dbf文件相关属性
+DBFField.FIELD_TYPE_D 表示Date型   
+DBFField.FIELD_TYPE_L 表示布尔型
+DBFField.FIELD_TYPE_N 表示数字   
+          ...
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/23/java导出dbf格式文件/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -537,9 +566,6 @@ writer<span class="token punctuation">.</span><span class="token function">write
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -570,75 +596,102 @@ writer<span class="token punctuation">.</span><span class="token function">write
               <p class="site-description motion-element" itemprop="description">Yo, what's up</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/shotacon" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:shotacon02@hotmail.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://music.163.com/#/user/home?id=117433892" target="_blank" title="Music">
-                      
-                        <i class="fa fa-fw fa-music"></i>Music</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/shotacon" title="GitHub &rarr; https://github.com/shotacon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:shotacon02@hotmail.com" title="E-Mail &rarr; mailto:shotacon02@hotmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://music.163.com/#/user/home?id=117433892" title="Music &rarr; https://music.163.com/#/user/home?id=117433892" rel="noopener" target="_blank"><i class="fa fa-fw fa-music"></i>Music</a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
@@ -659,16 +712,18 @@ writer<span class="token punctuation">.</span><span class="token function">write
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Shotacon</span>
+
+  
 
   
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -676,12 +731,31 @@ writer<span class="token punctuation">.</span><span class="token function">write
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a></div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v6.6.0</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
 
 
 
@@ -701,7 +775,10 @@ writer<span class="token punctuation">.</span><span class="token function">write
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -720,7 +797,11 @@ writer<span class="token punctuation">.</span><span class="token function">write
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -740,16 +821,6 @@ writer<span class="token punctuation">.</span><span class="token function">write
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -758,18 +829,13 @@ writer<span class="token punctuation">.</span><span class="token function">write
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
 
 
 
@@ -781,21 +847,7 @@ writer<span class="token punctuation">.</span><span class="token function">write
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
@@ -803,11 +855,7 @@ writer<span class="token punctuation">.</span><span class="token function">write
 
 
 
-
-
   
-
-
 
 
 
@@ -817,12 +865,14 @@ writer<span class="token punctuation">.</span><span class="token function">write
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
+    var guest = 'nick';
+    guest = guest.split(',').filter(function (item) {
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
@@ -833,8 +883,9 @@ writer<span class="token punctuation">.</span><span class="token function">write
         appKey: 'RBfR4fpP9DMDeqdGiQ4RQQaM',
         placeholder: '大爷, 不来两句么? ヾ(=･ω･=)o',
         avatar:'identicon',
-        guest_info:guest,
+        meta:guest,
         pageSize:'10' || 10,
+        visitor: true
     });
   </script>
 
@@ -853,6 +904,16 @@ writer<span class="token punctuation">.</span><span class="token function">write
   
 
   
+
+  
+
+  
+  
+
+  
+
+  
+
   
 
   
