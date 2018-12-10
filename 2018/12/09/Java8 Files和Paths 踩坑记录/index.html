@@ -115,24 +115,25 @@
 
 
 
-  <meta name="description" content="Yo, what&apos;s up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tag/index.html">
+  <meta name="description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.  1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有">
+<meta name="keywords" content="java,Files,Paths,NoSuchFileException,MalformedInputException">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java8 Files和Paths 踩坑记录">
+<meta property="og:url" content="http://yoursite.com/2018/12/09/Java8 Files和Paths 踩坑记录/index.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="Yo, what&apos;s up">
+<meta property="og:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.  1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-25T12:19:32.588Z">
+<meta property="og:updated_time" content="2018-12-10T02:17:35.833Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Yo, what&apos;s up">
+<meta name="twitter:title" content="Java8 Files和Paths 踩坑记录">
+<meta name="twitter:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.  1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tag/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/09/Java8 Files和Paths 踩坑记录/">
 
 
 
@@ -142,7 +143,7 @@
   };
 </script>
 
-  <title>tags | Shotacon</title>
+  <title>Java8 Files和Paths 踩坑记录 | Shotacon</title>
   
 
 
@@ -348,71 +349,236 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/Java8 Files和Paths 踩坑记录/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shotacon">
+      <meta itemprop="description" content="Yo, what's up">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shotacon">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Java8 Files和Paths 踩坑记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-09 20:50:30" itemprop="dateCreated datePublished" datetime="2018-12-09T20:50:30+08:00">2018-12-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-12-10 10:17:35" itemprop="dateModified" datetime="2018-12-10T10:17:35+08:00">2018-12-10</time>
+              
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/09/Java8 Files和Paths 踩坑记录/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/09/Java8 Files和Paths 踩坑记录/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/12/09/Java8 Files和Paths 踩坑记录/" class="leancloud_visitors" data-flag-title="Java8 Files和Paths 踩坑记录">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>咩.<br>java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作.</p>
+<p>好用是好用, 就是总有些细节让人蛋疼.</p>
+<p>逐步更新中.</p>
+</blockquote>
+<h2 id="1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException"><a href="#1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException" class="headerlink" title="1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException"></a>1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</h2><p>这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有文件夹未被创建, 就抛出此异常.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加个判断就OK了</span></span><br><span class="line">Path path = Paths.get(dir);</span><br><span class="line"><span class="keyword">if</span> (!Files.exists(path))</span><br><span class="line">	Files.createDirectories(path);</span><br></pre></td></tr></table></figure>
+<h2 id="2-java-nio-charset-MalformedInputException-Input-length-1"><a href="#2-java-nio-charset-MalformedInputException-Input-length-1" class="headerlink" title="2. java.nio.charset.MalformedInputException: Input length = 1"></a>2. java.nio.charset.MalformedInputException: <strong>Input</strong> <strong>length</strong> <strong>=</strong> <strong>1</strong></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Files读取文件的默认编码是UTF-8</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Stream&lt;String&gt; <span class="title">lines</span><span class="params">(Path path)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> lines(path, StandardCharsets.UTF_8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通常该异常是因为读取的文件编码不是utf-8引起的.</p>
+<p>但我这次引起是因为mac创建的<a href="https://zh.wikipedia.org/wiki/.DS_Store" target="_blank" rel="noopener">DS_Store</a>文件, 该文件是mac用于贮存目录自定义属性, 例如文件夹们的图标位置或者背景色之类.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 特意的加了文件名的判断. 避免错误的解析DS_Store文件.</span></span><br><span class="line">List&lt;Path&gt; fileList = Files.list(Paths.get(basePath))</span><br><span class="line">				.filter(path -&gt; !Files.isDirectory(path) &amp;&amp; !path.getFileName().toString().contains(<span class="string">"DS_Store"</span>))</span><br><span class="line">				.collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/Files/" rel="tag"># Files</a>
+          
+            <a href="/tags/Paths/" rel="tag"># Paths</a>
+          
+            <a href="/tags/NoSuchFileException/" rel="tag"># NoSuchFileException</a>
+          
+            <a href="/tags/MalformedInputException/" rel="tag"># MalformedInputException</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/23/java导出dbf格式文件/" rel="next" title="java导出dbf格式文件">
+                <i class="fa fa-chevron-left"></i> java导出dbf格式文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -446,8 +612,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -577,6 +752,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException"><span class="nav-number">1.</span> <span class="nav-text">1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-java-nio-charset-MalformedInputException-Input-length-1"><span class="nav-number">2.</span> <span class="nav-text">2. java.nio.charset.MalformedInputException: Input length = 1</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
