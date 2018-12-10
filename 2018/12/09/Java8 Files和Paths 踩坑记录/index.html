@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.  1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有">
+  <meta name="description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.">
 <meta name="keywords" content="java,Files,Paths,NoSuchFileException,MalformedInputException">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java8 Files和Paths 踩坑记录">
 <meta property="og:url" content="http://yoursite.com/2018/12/09/Java8 Files和Paths 踩坑记录/index.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.  1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有">
+<meta property="og:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-10T02:17:35.833Z">
+<meta property="og:updated_time" content="2018-12-10T02:18:34.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 Files和Paths 踩坑记录">
-<meta name="twitter:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.  1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有">
+<meta name="twitter:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.">
 
 
 
@@ -428,7 +428,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-12-10 10:17:35" itemprop="dateModified" datetime="2018-12-10T10:17:35+08:00">2018-12-10</time>
+                <time title="Modified: 2018-12-10 10:18:34" itemprop="dateModified" datetime="2018-12-10T10:18:34+08:00">2018-12-10</time>
               
             
           </span>
@@ -505,6 +505,7 @@
 <p>好用是好用, 就是总有些细节让人蛋疼.</p>
 <p>逐步更新中.</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException"><a href="#1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException" class="headerlink" title="1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException"></a>1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</h2><p>这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有文件夹未被创建, 就抛出此异常.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加个判断就OK了</span></span><br><span class="line">Path path = Paths.get(dir);</span><br><span class="line"><span class="keyword">if</span> (!Files.exists(path))</span><br><span class="line">	Files.createDirectories(path);</span><br></pre></td></tr></table></figure>
 <h2 id="2-java-nio-charset-MalformedInputException-Input-length-1"><a href="#2-java-nio-charset-MalformedInputException-Input-length-1" class="headerlink" title="2. java.nio.charset.MalformedInputException: Input length = 1"></a>2. java.nio.charset.MalformedInputException: <strong>Input</strong> <strong>length</strong> <strong>=</strong> <strong>1</strong></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Files读取文件的默认编码是UTF-8</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Stream&lt;String&gt; <span class="title">lines</span><span class="params">(Path path)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> lines(path, StandardCharsets.UTF_8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
