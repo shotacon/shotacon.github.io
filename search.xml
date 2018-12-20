@@ -50,4 +50,15 @@
         <tag>TCP</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[在VPS上搭建ss]]></title>
+    <url>%2F2017%2F12%2F01%2F%E5%9C%A8VPS%E4%B8%8A%E6%90%AD%E5%BB%BAss%2F</url>
+    <content type="text"><![CDATA[购买的是vultr的服务器,系统为CentOs7 X64 一般linux都会带python, 就不写怎么安装了. 12345678910111213141516171819202122232425# 使用pip安装shadowsockspip install shadowsocks# 创建并编辑配置mkdir /etc/shadowsocksvim /etc/shadowsocks/config.json# 添加配置(多端口)&#123; "server":"VPS的外网IP地址", "local_address":"127.0.0.1", # 本地代理地址, 默认就好 "local_port":1080, # 本地代理端口 "port_password": &#123; "端口1":"密码1", "端口2":"密码2", "端口3":"密码3" &#125;, "timeout":300, # 超时时间 "method":"aes-256-cfb", # 加密算法 "fast_open":false&#125;# 启动方式ssserver -c /etc/shadowsocks/config.json -d start 后台启动ssserver -c /etc/shadowsocks/config.json -d stop 后台停止 Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法123wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.shchmod +x bbr.sh./bbr.sh]]></content>
+      <categories>
+        <category>TCP</category>
+      </categories>
+      <tags>
+        <tag>TCP</tag>
+      </tags>
+  </entry>
 </search>
