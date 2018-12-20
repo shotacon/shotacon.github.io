@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[随机获取图片的API收集]]></title>
+    <url>%2F2018%2F12%2F20%2F%E9%9A%8F%E6%9C%BA%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%E7%9A%84API%E6%94%B6%E9%9B%86%2F</url>
+    <content type="text"><![CDATA[食用方法可以是img标签嵌入在网页中, 也可以在iwall.app里面设置你的桌面背景. 速度: ★★★★★ 功能: 返回Bing的随机图片 地址: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture 速度: ★★★★★ 功能: 返回随机图片, 需指定分辨率, 如果指定的分辨率没有找到图片则返回空页面 地址: http://lorempixel.com/1600/900 速度: ★★★★☆ 功能: 来自github的项目https://github.com/xCss/bing 地址: https://bing.ioliu.cn/v1/rand (返回随机图片) ​ https://bing.ioliu.cn/v1/rand?w=1920&amp;h=1200 (指定大小) 12345678910111213141516171819/** * 已知分辨率 */resolutions: [ &apos;1920x1200&apos;, &apos;1920x1080&apos;, &apos;1366x768&apos;, &apos;1280x768&apos;, &apos;1024x768&apos;, &apos;800x600&apos;, &apos;800x480&apos;, &apos;768x1280&apos;, &apos;720x1280&apos;, &apos;640x480&apos;, &apos;480x800&apos;, &apos;400x240&apos;, &apos;320x240&apos;, &apos;240x320&apos;] 速度: ★★☆☆☆ 功能: 返回指定分辨率的随机图片, (加载最慢, 可能是因为服务器在国外) 地址: https://unsplash.it/1600/900?random 速度: ★★★★★ 功能: 返回随机的二次元图片, 国人之作, 发现地址: https://www.dujin.org/12142.html/amp 地址: https://api.xjdog.cn/Get-Image 速度: ★★★★★★ 功能: 返回随机Bing图片, 其中数字为分辨率, 例如 1366x768 -&gt; 1366, 1920x1080 -&gt; 1920 地址: https://api.dujin.org/bing/1366.php ​ 还有其他好用的API吗? 请在下放留下您的评论. 非常感谢!]]></content>
+      <categories>
+        <category>Image</category>
+      </categories>
+      <tags>
+        <tag>img</tag>
+        <tag>随机图片</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java8 Files和Paths 踩坑记录]]></title>
     <url>%2F2018%2F12%2F09%2FJava8%20Files%E5%92%8CPaths%20%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中. 1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有文件夹未被创建, 就抛出此异常. 1234// 加个判断就OK了Path path = Paths.get(dir);if (!Files.exists(path)) Files.createDirectories(path); 2. java.nio.charset.MalformedInputException: Input length = 11234// Files读取文件的默认编码是UTF-8public static Stream&lt;String&gt; lines(Path path) throws IOException &#123; return lines(path, StandardCharsets.UTF_8);&#125; 通常该异常是因为读取的文件编码不是utf-8引起的. 但我这次引起是因为mac创建的DS_Store文件, 该文件是mac用于贮存目录自定义属性, 例如文件夹们的图标位置或者背景色之类. 1234// 特意的加了文件名的判断. 避免错误的解析DS_Store文件.List&lt;Path&gt; fileList = Files.list(Paths.get(basePath)) .filter(path -&gt; !Files.isDirectory(path) &amp;&amp; !path.getFileName().toString().contains("DS_Store")) .collect(Collectors.toList());]]></content>
