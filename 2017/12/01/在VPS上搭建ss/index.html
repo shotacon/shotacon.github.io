@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="购买的是vultr的服务器,系统为CentOs7 X64 一般linux都会带python, 就不写怎么安装了. 12345678910111213141516171819202122232425# 使用pip安装shadowsockspip install shadowsocks# 创建并编辑配置mkdir /etc/shadowsocksvim /etc/shadowsocks/config.">
+  <meta name="description" content="购买的是vultr的服务器,系统为CentOs7 X64">
 <meta name="keywords" content="shadowsocks">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在VPS上搭建ss">
 <meta property="og:url" content="http://yoursite.com/2017/12/01/在VPS上搭建ss/index.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="购买的是vultr的服务器,系统为CentOs7 X64 一般linux都会带python, 就不写怎么安装了. 12345678910111213141516171819202122232425# 使用pip安装shadowsockspip install shadowsocks# 创建并编辑配置mkdir /etc/shadowsocksvim /etc/shadowsocks/config.">
+<meta property="og:description" content="购买的是vultr的服务器,系统为CentOs7 X64">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T04:34:46.061Z">
+<meta property="og:updated_time" content="2018-12-20T05:36:27.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在VPS上搭建ss">
-<meta name="twitter:description" content="购买的是vultr的服务器,系统为CentOs7 X64 一般linux都会带python, 就不写怎么安装了. 12345678910111213141516171819202122232425# 使用pip安装shadowsockspip install shadowsocks# 创建并编辑配置mkdir /etc/shadowsocksvim /etc/shadowsocks/config.">
+<meta name="twitter:description" content="购买的是vultr的服务器,系统为CentOs7 X64">
 
 
 
@@ -428,7 +428,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-12-20 12:34:46" itemprop="dateModified" datetime="2018-12-20T12:34:46+08:00">2018-12-20</time>
+                <time title="Modified: 2018-12-20 13:36:27" itemprop="dateModified" datetime="2018-12-20T13:36:27+08:00">2018-12-20</time>
               
             
           </span>
@@ -501,6 +501,7 @@
 
       
         <p>购买的是<a href="https://www.vultr.com/" target="_blank" rel="noopener">vultr</a>的服务器,<br>系统为CentOs7 X64</p>
+<a id="more"></a>
 <p>一般linux都会带python, 就不写怎么安装了.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 使用pip安装shadowsocks</span><br><span class="line">pip install shadowsocks</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 创建并编辑配置</span><br><span class="line">mkdir /etc/shadowsocks</span><br><span class="line">vim /etc/shadowsocks/config.json</span><br><span class="line"><span class="meta">#</span> 添加配置(多端口)</span><br><span class="line">&#123;</span><br><span class="line"> "server":"VPS的外网IP地址",</span><br><span class="line"> "local_address":"127.0.0.1", # 本地代理地址, 默认就好</span><br><span class="line"> "local_port":1080, # 本地代理端口</span><br><span class="line"> "port_password":</span><br><span class="line"> &#123;</span><br><span class="line">  "端口1":"密码1",</span><br><span class="line">  "端口2":"密码2",</span><br><span class="line">  "端口3":"密码3"</span><br><span class="line"> &#125;,</span><br><span class="line"> "timeout":300, # 超时时间</span><br><span class="line"> "method":"aes-256-cfb", # 加密算法</span><br><span class="line"> "fast_open":false</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 启动方式</span><br><span class="line">ssserver -c /etc/shadowsocks/config.json -d start 后台启动</span><br><span class="line">ssserver -c /etc/shadowsocks/config.json -d stop 后台停止</span><br></pre></td></tr></table></figure>
 <h5 id="Google-BBR是一种新兴的TCP单边加速方案-建议开启BBR加速算法"><a href="#Google-BBR是一种新兴的TCP单边加速方案-建议开启BBR加速算法" class="headerlink" title="Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法"></a>Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
