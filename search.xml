@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[jvm的内存划分(1.7+)笔记]]></title>
+    <url>%2F2018%2F12%2F21%2Fjvm%E7%9A%84%E5%86%85%E5%AD%98%E5%88%92%E5%88%86%2F</url>
+    <content type="text"><![CDATA[程序计数器: 没有OOM, 线程私有, 线程间互不干扰, 用来指示线程执行指令地址的. Native方法没有计数器值. 虚拟机栈: 线程私有, 生命周期同线程, 方法在执行的时候会创建一个栈帧用来存局部变量, 动态链接, 方法出口等信息. 一个方法从调用到执行完毕, 对应着一个栈帧从入栈到出栈. 通常被称为”栈内存”. 当线程请求的栈深度大于虚拟机所允许的深度, 抛出StackOverflowError. 如果虚拟机栈可以动态扩展(Java可以动态扩展也可以固定长度), 在扩展时若无法申请到足够内存则抛出OutOfMemoryError. 本地方法栈: 作用类似虚拟机栈, 不过本地方法栈执行Native方法. 也会有StackOverflowError和OutOfMemoryError出现. 方法区: 线程共享, 存储类的信息、常量池、方法数据、方法代码(编译器编码后的)等.”java.lang.OutOfMemoryError: PermGen space “就是指的方法区. 堆: 内存最大, 线程共享, 在虚拟机启动时创建. 用作存放对象实例, 也是GC的主要区域. 细分为新生代和老年代. 永久带: 1.8之后永久带转换成了元空间(Metaspace), 且PermSize 和 MaxPermSize 会被忽略并给出警告. 在1.7中开始移除, 但未完全移除. 其中原因可能有: 字符串在永久带中不利于GC, 容易出现性能问题和内存溢出. 类和方法的信息比较难确定大小, 所以永久带不好指定大小, 大了老年代溢出, 小了永久带溢出 元空间: 元空间内存储的类元数据的生命周期等于该类的类加载器生命周期, 不再单独回收某各类, 且对象的位置是固定的, 当类加载器不再存活, 被gc声明死亡后, 该类加载器对应的空间就会被回收. 元空间使用-XX：MinMetaspaceFreeRatio和-XX：MaxMetaspaceFreeRatio进行调节. 常量池: 方法区的一部分. 用于存放编译期和运行时生成的各种字面量和符号引用. 比如String类的intern方法 直接内存: 也就是堆外内存, NIO可以通过Native函数直接分配, 通过在堆中的DirectByteBuffer作为引用进行操作. 注意内存泄漏导致的OOM.]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[随机获取图片的API收集]]></title>
     <url>%2F2018%2F12%2F20%2F%E9%9A%8F%E6%9C%BA%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%E7%9A%84API%E6%94%B6%E9%9B%86%2F</url>
     <content type="text"><![CDATA[食用方法可以是img标签嵌入在网页中, 也可以在iwall.app里面设置你的桌面背景. 速度: ★★★★★ 功能: 返回Bing的随机图片 地址: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture 速度: ★★★★★ 功能: 返回随机图片, 需指定分辨率, 如果指定的分辨率没有找到图片则返回空页面 地址: http://lorempixel.com/1600/900 速度: ★★★★☆ 功能: 来自github的项目https://github.com/xCss/bing 地址: https://bing.ioliu.cn/v1/rand (返回随机图片) ​ https://bing.ioliu.cn/v1/rand?w=1920&amp;h=1200 (指定大小) 12345678910111213141516171819/** * 已知分辨率 */resolutions: [ &apos;1920x1200&apos;, &apos;1920x1080&apos;, &apos;1366x768&apos;, &apos;1280x768&apos;, &apos;1024x768&apos;, &apos;800x600&apos;, &apos;800x480&apos;, &apos;768x1280&apos;, &apos;720x1280&apos;, &apos;640x480&apos;, &apos;480x800&apos;, &apos;400x240&apos;, &apos;320x240&apos;, &apos;240x320&apos;] 速度: ★★☆☆☆ 功能: 返回指定分辨率的随机图片, (加载最慢, 可能是因为服务器在国外) 地址: https://unsplash.it/1600/900?random 速度: ★★★★★ 功能: 返回随机的二次元图片, 国人之作, 发现地址: https://www.dujin.org/12142.html/amp 地址: https://api.xjdog.cn/Get-Image 速度: ★★★★★★ 功能: 返回随机Bing图片, 其中数字为分辨率, 例如 1366x768 -&gt; 1366, 1920x1080 -&gt; 1920 地址: https://api.dujin.org/bing/1366.php ​ 还有其他好用的API吗? 请在下放留下您的评论. 非常感谢!]]></content>
