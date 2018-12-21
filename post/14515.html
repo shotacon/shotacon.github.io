@@ -115,25 +115,25 @@
 
 
 
-  <meta name="description" content="食用方法可以是img标签嵌入在网页中, 也可以在iwall.app里面设置你的桌面背景.   速度: ★★★★★ 功能: 返回Bing的随机图片 地址: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture">
-<meta name="keywords" content="img,随机图片">
+  <meta name="description" content="程序计数器: 没有OOM, 线程私有, 线程间互不干扰, 用来指示线程执行指令地址的. Native方法没有计数器值.">
+<meta name="keywords" content="java,jvm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随机获取图片的API收集">
-<meta property="og:url" content="http://yoursite.com/2018/12/20/随机获取图片的API收集/index.html">
+<meta property="og:title" content="jvm的内存划分(1.7+)笔记">
+<meta property="og:url" content="http://yoursite.com/post/14515.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="食用方法可以是img标签嵌入在网页中, 也可以在iwall.app里面设置你的桌面背景.   速度: ★★★★★ 功能: 返回Bing的随机图片 地址: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture">
+<meta property="og:description" content="程序计数器: 没有OOM, 线程私有, 线程间互不干扰, 用来指示线程执行指令地址的. Native方法没有计数器值.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T03:07:38.986Z">
+<meta property="og:updated_time" content="2018-12-21T07:20:02.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随机获取图片的API收集">
-<meta name="twitter:description" content="食用方法可以是img标签嵌入在网页中, 也可以在iwall.app里面设置你的桌面背景.   速度: ★★★★★ 功能: 返回Bing的随机图片 地址: https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture">
+<meta name="twitter:title" content="jvm的内存划分(1.7+)笔记">
+<meta name="twitter:description" content="程序计数器: 没有OOM, 线程私有, 线程间互不干扰, 用来指示线程执行指令地址的. Native方法没有计数器值.">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/20/随机获取图片的API收集/">
+  <link rel="canonical" href="http://yoursite.com/post/14515.html">
 
 
 
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>随机获取图片的API收集 | Shotacon</title>
+  <title>jvm的内存划分(1.7+)笔记 | Shotacon</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/随机获取图片的API收集/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/14515.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shotacon">
@@ -386,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">随机获取图片的API收集
+          <h1 class="post-title" itemprop="name headline">jvm的内存划分(1.7+)笔记
               
             
           </h1>
@@ -411,7 +411,7 @@
                 
               
 
-              <time title="Created: 2018-12-20 11:05:51 / Modified: 11:07:38" itemprop="dateCreated datePublished" datetime="2018-12-20T11:05:51+08:00">2018-12-20</time>
+              <time title="Created: 2018-12-21 14:49:11 / Modified: 15:20:02" itemprop="dateCreated datePublished" datetime="2018-12-21T14:49:11+08:00">2018-12-21</time>
             
 
             
@@ -433,7 +433,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Image/" itemprop="url" rel="index"><span itemprop="name">Image</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -448,8 +448,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/20/随机获取图片的API收集/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/20/随机获取图片的API收集/" itemprop="commentCount"></span>
+                <a href="/post/14515.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/post/14515.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -457,7 +457,7 @@
 
           
           
-             <span id="/2018/12/20/随机获取图片的API收集/" class="leancloud_visitors" data-flag-title="随机获取图片的API收集">
+             <span id="/post/14515.html" class="leancloud_visitors" data-flag-title="jvm的内存划分(1.7+)笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -488,40 +488,41 @@
       
 
       
-        <blockquote>
-<p>食用方法可以是img标签嵌入在网页中, 也可以在iwall.app里面设置你的桌面背景.</p>
-</blockquote>
-<ol>
-<li><p>速度: ★★★★★</p>
-<p>功能: 返回Bing的随机图片</p>
-<p>地址: <a href="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" target="_blank" rel="noopener">https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture</a> </p>
+        <ul>
+<li><p><strong>程序计数器</strong>: 没有OOM, 线程私有, 线程间互不干扰, 用来指示线程执行指令地址的. Native方法没有计数器值. </p>
 <a id="more"></a>
 </li>
-<li><p>速度: ★★★★★</p>
-<p>功能: 返回随机图片, 需指定分辨率, 如果指定的分辨率没有找到图片则返回空页面</p>
-<p>地址: <a href="http://lorempixel.com/1600/900" target="_blank" rel="noopener">http://lorempixel.com/1600/900</a></p>
+<li><p><strong>虚拟机栈</strong>: 线程私有, 生命周期同线程, 方法在执行的时候会创建一个栈帧用来存局部变量, 动态链接, 方法出口等信息. 一个方法从调用到执行完毕, 对应着一个栈帧从入栈到出栈. 通常被称为”栈内存”.</p>
+<p>当线程请求的栈深度大于虚拟机所允许的深度, 抛出StackOverflowError.</p>
+<p>如果虚拟机栈可以动态扩展(Java可以动态扩展也可以固定长度), 在扩展时若无法申请到足够内存则抛出OutOfMemoryError.</p>
 </li>
-<li><p>速度: ★★★★☆</p>
-<p>功能: 来自github的项目<a href="https://github.com/xCss/bing" target="_blank" rel="noopener">https://github.com/xCss/bing</a></p>
-<p>地址: <a href="https://bing.ioliu.cn/v1/rand" target="_blank" rel="noopener">https://bing.ioliu.cn/v1/rand</a> (返回随机图片)</p>
-<p>​      <a href="https://bing.ioliu.cn/v1/rand?w=1920&amp;h=1200" target="_blank" rel="noopener">https://bing.ioliu.cn/v1/rand?w=1920&amp;h=1200</a> (指定大小)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 已知分辨率</span><br><span class="line"> */</span><br><span class="line">resolutions: [</span><br><span class="line">    &apos;1920x1200&apos;,</span><br><span class="line">    &apos;1920x1080&apos;,</span><br><span class="line">    &apos;1366x768&apos;,</span><br><span class="line">    &apos;1280x768&apos;,</span><br><span class="line">    &apos;1024x768&apos;,</span><br><span class="line">    &apos;800x600&apos;,</span><br><span class="line">    &apos;800x480&apos;,</span><br><span class="line">    &apos;768x1280&apos;,</span><br><span class="line">    &apos;720x1280&apos;,</span><br><span class="line">    &apos;640x480&apos;,</span><br><span class="line">    &apos;480x800&apos;,</span><br><span class="line">    &apos;400x240&apos;,</span><br><span class="line">    &apos;320x240&apos;,</span><br><span class="line">    &apos;240x320&apos;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<li><p><strong>本地方法栈</strong>: 作用类似虚拟机栈, 不过本地方法栈执行Native方法. 也会有StackOverflowError和OutOfMemoryError出现.</p>
 </li>
-<li><p>速度: ★★☆☆☆</p>
-<p>功能: 返回指定分辨率的随机图片, (加载最慢, 可能是因为服务器在国外)</p>
-<p>地址: <a href="https://unsplash.it/1600/900?random" target="_blank" rel="noopener">https://unsplash.it/1600/900?random</a> </p>
+<li><p><strong>方法区</strong>: 线程共享, 存储类的信息、常量池、方法数据、方法代码(编译器编码后的)等.”java.lang.OutOfMemoryError: PermGen space “就是指的方法区.</p>
 </li>
-<li><p>速度: ★★★★★</p>
-<p>功能: 返回随机的二次元图片, 国人之作, 发现地址: <a href="https://www.dujin.org/12142.html/amp" target="_blank" rel="noopener">https://www.dujin.org/12142.html/amp</a></p>
-<p>地址: <a href="https://api.xjdog.cn/Get-Image" target="_blank" rel="noopener">https://api.xjdog.cn/Get-Image</a></p>
+<li><p><strong>堆</strong>: 内存最大, 线程共享, 在虚拟机启动时创建. 用作存放对象实例, 也是GC的主要区域.</p>
+<p>细分为新生代和老年代. </p>
 </li>
-<li><p>速度: ★★★★★★</p>
-<p>功能: 返回随机Bing图片, 其中数字为分辨率, 例如 1366x768 -&gt; 1366,  1920x1080 -&gt; 1920</p>
-<p>地址: <a href="https://api.dujin.org/bing/1366.php" target="_blank" rel="noopener">https://api.dujin.org/bing/1366.php</a></p>
+<li><p><strong>永久带</strong>: 1.8之后永久带转换成了元空间(Metaspace), 且PermSize 和 MaxPermSize 会被忽略并给出警告.</p>
+<p>在1.7中开始移除, 但未完全移除.</p>
+<p>其中原因可能有: </p>
+<ol>
+<li><p>字符串在永久带中不利于GC, 容易出现性能问题和内存溢出.</p>
+</li>
+<li><p>类和方法的信息比较难确定大小, 所以永久带不好指定大小, 大了老年代溢出, 小了永久带溢出</p>
 </li>
 </ol>
-<p>​    </p>
-<p>还有其他好用的API吗? 请在下放留下您的评论. 非常感谢!</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>元空间</strong>: 元空间内存储的类元数据的生命周期等于该类的类加载器生命周期, 不再单独回收某各类, 且对象的位置是固定的, 当类加载器不再存活, 被gc声明死亡后, 该类加载器对应的空间就会被回收.</p>
+<p>元空间使用-XX：MinMetaspaceFreeRatio和-XX：MaxMetaspaceFreeRatio进行调节.</p>
+</li>
+<li><p><strong>常量池</strong>: 方法区的一部分. 用于存放编译期和运行时生成的各种字面量和符号引用. 比如String类的intern方法</p>
+</li>
+<li><p><strong>直接内存</strong>: 也就是堆外内存, NIO可以通过Native函数直接分配, 通过在堆中的DirectByteBuffer作为引用进行操作. 注意内存泄漏导致的OOM.</p>
+</li>
+</ul>
 
       
     </div>
@@ -545,9 +546,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/img/" rel="tag"># img</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
-            <a href="/tags/随机图片/" rel="tag"># 随机图片</a>
+            <a href="/tags/jvm/" rel="tag"># jvm</a>
           
         </div>
       
@@ -560,8 +561,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/09/Java8 Files和Paths 踩坑记录/" rel="next" title="Java8 Files和Paths 踩坑记录">
-                <i class="fa fa-chevron-left"></i> Java8 Files和Paths 踩坑记录
+              <a href="/post/18256.html" rel="next" title="随机获取图片的API收集">
+                <i class="fa fa-chevron-left"></i> 随机获取图片的API收集
               </a>
             
           </div>
@@ -569,10 +570,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/21/jvm的内存划分/" rel="prev" title="jvm的内存划分(1.7+)笔记">
-                jvm的内存划分(1.7+)笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

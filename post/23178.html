@@ -115,25 +115,25 @@
 
 
 
-  <meta name="description" content="在TCP层, 有个FLAGS字段, 这个字段有以下几个标识:   SYN : 建立连接,  FIN : 关闭连接,  ACK : 响应,  PSH : 有未分片的DATA数据传输,  RST : 连接重置.">
-<meta name="keywords" content="TCP">
+  <meta name="description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.">
+<meta name="keywords" content="java,Files,Paths,NoSuchFileException,MalformedInputException">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP的几种状态(笔记)">
-<meta property="og:url" content="http://yoursite.com/2018/01/19/TCP的几种状态/index.html">
+<meta property="og:title" content="Java8 Files和Paths 踩坑记录">
+<meta property="og:url" content="http://yoursite.com/post/23178.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="在TCP层, 有个FLAGS字段, 这个字段有以下几个标识:   SYN : 建立连接,  FIN : 关闭连接,  ACK : 响应,  PSH : 有未分片的DATA数据传输,  RST : 连接重置.">
+<meta property="og:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T04:24:11.017Z">
+<meta property="og:updated_time" content="2018-12-21T07:20:02.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TCP的几种状态(笔记)">
-<meta name="twitter:description" content="在TCP层, 有个FLAGS字段, 这个字段有以下几个标识:   SYN : 建立连接,  FIN : 关闭连接,  ACK : 响应,  PSH : 有未分片的DATA数据传输,  RST : 连接重置.">
+<meta name="twitter:title" content="Java8 Files和Paths 踩坑记录">
+<meta name="twitter:description" content="咩.java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作. 好用是好用, 就是总有些细节让人蛋疼. 逐步更新中.">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/19/TCP的几种状态/">
+  <link rel="canonical" href="http://yoursite.com/post/23178.html">
 
 
 
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>TCP的几种状态(笔记) | Shotacon</title>
+  <title>Java8 Files和Paths 踩坑记录 | Shotacon</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/TCP的几种状态/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/23178.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shotacon">
@@ -386,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TCP的几种状态(笔记)
+          <h1 class="post-title" itemprop="name headline">Java8 Files和Paths 踩坑记录
               
             
           </h1>
@@ -411,7 +411,7 @@
                 
               
 
-              <time title="Created: 2018-01-19 10:34:22" itemprop="dateCreated datePublished" datetime="2018-01-19T10:34:22+08:00">2018-01-19</time>
+              <time title="Created: 2018-12-09 20:50:30" itemprop="dateCreated datePublished" datetime="2018-12-09T20:50:30+08:00">2018-12-09</time>
             
 
             
@@ -428,7 +428,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-12-20 12:24:11" itemprop="dateModified" datetime="2018-12-20T12:24:11+08:00">2018-12-20</time>
+                <time title="Modified: 2018-12-21 15:20:02" itemprop="dateModified" datetime="2018-12-21T15:20:02+08:00">2018-12-21</time>
               
             
           </span>
@@ -445,7 +445,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/TCP/" itemprop="url" rel="index"><span itemprop="name">TCP</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -460,8 +460,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/19/TCP的几种状态/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/01/19/TCP的几种状态/" itemprop="commentCount"></span>
+                <a href="/post/23178.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/post/23178.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -469,7 +469,7 @@
 
           
           
-             <span id="/2018/01/19/TCP的几种状态/" class="leancloud_visitors" data-flag-title="TCP的几种状态(笔记)">
+             <span id="/post/23178.html" class="leancloud_visitors" data-flag-title="Java8 Files和Paths 踩坑记录">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -500,43 +500,18 @@
       
 
       
-        <p>在TCP层, 有个FLAGS字段, 这个字段有以下几个标识: </p>
-<ul>
-<li>SYN : 建立连接, </li>
-<li>FIN : 关闭连接, </li>
-<li>ACK : 响应, </li>
-<li>PSH : 有未分片的DATA数据传输, </li>
-<li>RST : 连接重置. </li>
-</ul>
+        <blockquote>
+<p>咩.<br>java7引进的java.nio.file包的Files和Paths还有其他工具类, 以代替File和各类Stream进行文件的IO操作.</p>
+<p>好用是好用, 就是总有些细节让人蛋疼.</p>
+<p>逐步更新中.</p>
+</blockquote>
 <a id="more"></a>
-<p>其中, ACK是可能与SYN, FIN等同时使用的.</p>
-<p>比如SYN和ACK可能同时为1, 它表示的就是建立连接之后的响应, 如果只是单个的一个SYN, 它表示的只是建立连接, TCP的几次握手就是通过这样的ACK表现出来的.<br>但SYN与FIN是不会同时为1的, 因为前者表示的是建立连接, 而后者表示的是断开连接. </p>
-<p>RST一般是在FIN之后才会出现为1的情况, 表示的是连接重置. 一般地, 当出现FIN包或RST包时, 我们便认为客户端与服务器端断开了连接；而当出现SYN和SYN＋ACK包时, 我们认为客户端与服务器建立了一个连接. </p>
-<p>PSH为1的情况, 一般只出现在 DATA内容不为0的包中, 也就是说PSH为1表示的是有真正的TCP数据包内容被传递.<br>TCP的连接建立和连接关闭, 都是通过请求－响应的模式完成的. </p>
-<h5 id="概念补充-TCP三次握手"><a href="#概念补充-TCP三次握手" class="headerlink" title="概念补充-TCP三次握手:"></a>概念补充-TCP三次握手:</h5><p>TCP(Transmission Control Protocol)传输控制协议是主机对主机层的传输控制协议, 提供可靠的连接服务, 采用三次握手确认建立一个连接.</p>
-<p>位码即tcp标志位, 有6种标示: </p>
-<ol>
-<li>SYN(synchronous建立联机)</li>
-<li>ACK(acknowledgement 确认)</li>
-<li>PSH(push传送)</li>
-<li>FIN(finish结束)</li>
-<li>RST(reset重置)</li>
-<li>URG(urgent紧急)</li>
-</ol>
-<p>其他如: Sequence number(顺序号码), Acknowledge number(确认号码) 等.</p>
-<ul>
-<li>第一次握手：主机A发送位码为syn＝1, 随机产生seq number=1234567的数据包到服务器, 主机B由SYN=1知道, A要求建立联机;</li>
-<li>第二次握手: 主机B收到请求后要确认联机信息, 向A发送ack number=(主机A的seq+1), syn=1, ack=1, 随机产生seq=7654321的包;</li>
-<li>第三次握手: 主机A收到后检查ack number是否正确, 即第一次发送的seq number+1, 以及位码ack是否为1, 若正确, 主机A会再发送ack number=(主机B的seq+1), ack=1, 主机B收到后确认seq值与ack=1则连接建立成功. </li>
-</ul>
-<p>完成三次握手, 主机A与主机B开始传送数据. </p>
-<p>在TCP/IP协议中, TCP协议提供可靠的连接服务, 采用三次握手建立一个连接.   </p>
-<ul>
-<li>第一次握手: 建立连接时, 客户端发送syn包(syn=j)到服务器, 并进入SYN_SEND状态, 等待服务器确认;</li>
-<li>第二次握手: 服务器收到syn包, 必须确认客户的SYN（ack=j+1）, 同时自己也发送一个SYN包（syn=k）, 即SYN+ACK包, 此时服务器进入SYN_RECV状态；</li>
-<li>第三次握手: 客户端收到服务器的SYN＋ACK包, 向服务器发送确认包ACK(ack=k+1), 此包发送完毕, 客户端和服务器进入ESTABLISHED状态, 完成三次握手. 完成三次握手, 客户端与服务器开始传送数据. </li>
-</ul>
-<p>摘自<a href="www.yunsec.net">中国云安网</a>, 原文链接:<a href="http://www.yunsec.net/a/school/wlcs/agreement/2012/0317/10262.html" target="_blank" rel="noopener">http://www.yunsec.net/a/school/wlcs/agreement/2012/0317/10262.html</a></p>
+<h2 id="1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException"><a href="#1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException" class="headerlink" title="1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException"></a>1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</h2><p>这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有文件夹未被创建, 就抛出此异常.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加个判断就OK了</span></span><br><span class="line">Path path = Paths.get(dir);</span><br><span class="line"><span class="keyword">if</span> (!Files.exists(path))</span><br><span class="line">	Files.createDirectories(path);</span><br></pre></td></tr></table></figure>
+<h2 id="2-java-nio-charset-MalformedInputException-Input-length-1"><a href="#2-java-nio-charset-MalformedInputException-Input-length-1" class="headerlink" title="2. java.nio.charset.MalformedInputException: Input length = 1"></a>2. java.nio.charset.MalformedInputException: <strong>Input</strong> <strong>length</strong> <strong>=</strong> <strong>1</strong></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Files读取文件的默认编码是UTF-8</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Stream&lt;String&gt; <span class="title">lines</span><span class="params">(Path path)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> lines(path, StandardCharsets.UTF_8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通常该异常是因为读取的文件编码不是utf-8引起的.</p>
+<p>但我这次引起是因为mac创建的<a href="https://zh.wikipedia.org/wiki/.DS_Store" target="_blank" rel="noopener">DS_Store</a>文件, 该文件是mac用于贮存目录自定义属性, 例如文件夹们的图标位置或者背景色之类.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 特意的加了文件名的判断. 避免错误的解析DS_Store文件.</span></span><br><span class="line">List&lt;Path&gt; fileList = Files.list(Paths.get(basePath))</span><br><span class="line">				.filter(path -&gt; !Files.isDirectory(path) &amp;&amp; !path.getFileName().toString().contains(<span class="string">"DS_Store"</span>))</span><br><span class="line">				.collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -560,7 +535,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TCP/" rel="tag"># TCP</a>
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/Files/" rel="tag"># Files</a>
+          
+            <a href="/tags/Paths/" rel="tag"># Paths</a>
+          
+            <a href="/tags/NoSuchFileException/" rel="tag"># NoSuchFileException</a>
+          
+            <a href="/tags/MalformedInputException/" rel="tag"># MalformedInputException</a>
           
         </div>
       
@@ -573,8 +556,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/01/在VPS上搭建ss/" rel="next" title="在VPS上搭建ss">
-                <i class="fa fa-chevron-left"></i> 在VPS上搭建ss
+              <a href="/post/46831.html" rel="next" title="java导出dbf格式文件">
+                <i class="fa fa-chevron-left"></i> java导出dbf格式文件
               </a>
             
           </div>
@@ -583,8 +566,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/23/java导出dbf格式文件/" rel="prev" title="java导出dbf格式文件">
-                java导出dbf格式文件 <i class="fa fa-chevron-right"></i>
+              <a href="/post/18256.html" rel="prev" title="随机获取图片的API收集">
+                随机获取图片的API收集 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -800,7 +783,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念补充-TCP三次握手"><span class="nav-number">1.</span> <span class="nav-text">概念补充-TCP三次握手:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException"><span class="nav-number">1.</span> <span class="nav-text">1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-java-nio-charset-MalformedInputException-Input-length-1"><span class="nav-number">2.</span> <span class="nav-text">2. java.nio.charset.MalformedInputException: Input length = 1</span></a></li></ol></div>
             
 
           </div>
