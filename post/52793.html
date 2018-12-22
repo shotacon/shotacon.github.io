@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="Shotacon">
 <meta property="og:description" content="购买的是vultr的服务器,系统为CentOs7 X64">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-21T07:20:02.482Z">
+<meta property="og:updated_time" content="2018-12-22T03:05:21.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在VPS上搭建ss">
 <meta name="twitter:description" content="购买的是vultr的服务器,系统为CentOs7 X64">
@@ -428,7 +428,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-12-21 15:20:02" itemprop="dateModified" datetime="2018-12-21T15:20:02+08:00">2018-12-21</time>
+                <time title="Modified: 2018-12-22 11:05:21" itemprop="dateModified" datetime="2018-12-22T11:05:21+08:00">2018-12-22</time>
               
             
           </span>
@@ -505,6 +505,14 @@
 <p>一般linux都会带python, 就不写怎么安装了.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 使用pip安装shadowsocks</span><br><span class="line">pip install shadowsocks</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 创建并编辑配置</span><br><span class="line">mkdir /etc/shadowsocks</span><br><span class="line">vim /etc/shadowsocks/config.json</span><br><span class="line"><span class="meta">#</span> 添加配置(多端口)</span><br><span class="line">&#123;</span><br><span class="line"> "server":"VPS的外网IP地址",</span><br><span class="line"> "local_address":"127.0.0.1", # 本地代理地址, 默认就好</span><br><span class="line"> "local_port":1080, # 本地代理端口</span><br><span class="line"> "port_password":</span><br><span class="line"> &#123;</span><br><span class="line">  "端口1":"密码1",</span><br><span class="line">  "端口2":"密码2",</span><br><span class="line">  "端口3":"密码3"</span><br><span class="line"> &#125;,</span><br><span class="line"> "timeout":300, # 超时时间</span><br><span class="line"> "method":"aes-256-cfb", # 加密算法</span><br><span class="line"> "fast_open":false</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 启动方式</span><br><span class="line">ssserver -c /etc/shadowsocks/config.json -d start 后台启动</span><br><span class="line">ssserver -c /etc/shadowsocks/config.json -d stop 后台停止</span><br></pre></td></tr></table></figure>
 <h5 id="Google-BBR是一种新兴的TCP单边加速方案-建议开启BBR加速算法"><a href="#Google-BBR是一种新兴的TCP单边加速方案-建议开启BBR加速算法" class="headerlink" title="Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法"></a>Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
+<h5 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h5><ol>
+<li>如果用的是像阿里云, Google Cloud, 腾讯云, AWS等云平台, 记得开放端口.</li>
+<li><p>如果你的镜像里没有pip, 但是有python, 那就装一个. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 如果连wget都没有, 像Google Cloud提供的CentOS就比较干净.</span><br><span class="line">yum install wget</span><br><span class="line">wget https://bootstrap.pypa.io/get-pip.py</span><br><span class="line">python get-pip.py</span><br><span class="line"><span class="meta">#</span> 如果连python都没有, 百度吧</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>端口个数看使用情况定, 通常来说几个人用就开几个端口.</p>
+</li>
+</ol>
 
       
     </div>
@@ -764,7 +772,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Google-BBR是一种新兴的TCP单边加速方案-建议开启BBR加速算法"><span class="nav-number">1.</span> <span class="nav-text">Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Google-BBR是一种新兴的TCP单边加速方案-建议开启BBR加速算法"><span class="nav-number">1.</span> <span class="nav-text">Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他注意事项"><span class="nav-number">2.</span> <span class="nav-text">其他注意事项</span></a></li></ol></div>
             
 
           </div>
