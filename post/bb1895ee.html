@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="Shotacon">
 <meta property="og:description" content="常年搁置的Twitter账号总是被拿去做广告, 转发各种垃圾推文. 辣么如何在找回之后清理呢.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-26T14:00:04.961Z">
+<meta property="og:updated_time" content="2019-01-26T14:01:58.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="清理Twitter">
 <meta name="twitter:description" content="常年搁置的Twitter账号总是被拿去做广告, 转发各种垃圾推文. 辣么如何在找回之后清理呢.">
@@ -411,7 +411,7 @@
                 
               
 
-              <time title="Created: 2019-01-26 22:00:04" itemprop="dateCreated datePublished" datetime="2019-01-26T22:00:04+08:00">2019-01-26</time>
+              <time title="Created: 2019-01-26 22:01:58" itemprop="dateCreated datePublished" datetime="2019-01-26T22:01:58+08:00">2019-01-26</time>
             
 
             
@@ -495,29 +495,25 @@
 <li>Step 1, 清理推文</li>
 </ul>
 <ol>
-<li>进到主页<a href="https://twitter.com/yourAccount" target="_blank" rel="noopener">https://twitter.com/yourAccount</a><ol start="2">
+<li>进到主页<a href="https://twitter.com/yourAccount" target="_blank" rel="noopener">https://twitter.com/yourAccount</a></li>
 <li>在头像的右侧选择Tweets标签(一般默认就是这里), 然后一直下拉到底部, 因为清理的只是当前显示的.</li>
 <li>右键检查或者F12进入控制台, 选择Console, 粘贴并执行下面的脚本, 等待一会就OK了.</li>
 </ol>
-</li>
-</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;.js-actionDelete&quot;).each(function()&#123;$(this).click()$(&quot;.delete-action&quot;).get(0).click()&#125;)</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>Step 2, 清理转推</p>
+<li>Step 2, 清理转推</li>
+</ul>
 <ol>
 <li>刷新页面. 剩下的这些没有删除提示的就是转推了.</li>
 <li>同样一直下拉到底部, 粘贴脚本, 执行, 等一会就可以了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;.js-actionRetweet&quot;).each(function()&#123;$(this).click()&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-</li>
-<li><p>Step 3</p>
-</li>
+<ul>
+<li>Step 3</li>
 </ul>
 <ol>
-<li>点击头像右侧的Following, 一直下拉到底部, 粘贴并执行脚本, 等一会就全部UnFollow了.<ol start="2">
+<li>点击头像右侧的Following, 一直下拉到底部, 粘贴并执行脚本, 等一会就全部UnFollow了.</li>
 <li>不要在当前页面重复执行哦. 点一次是取消, 再点一次可就是又关注了.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;.following .js-follow-btn&quot;).click()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 </li>
 </ol>
 
