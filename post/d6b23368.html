@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="JVM JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
+  <meta name="description" content="JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
 <meta name="keywords" content="java,jvm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jvm的学习笔记">
 <meta property="og:url" content="http://yoursite.com/post/d6b23368.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="JVM JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
+<meta property="og:description" content="JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-20T13:07:41.497Z">
+<meta property="og:updated_time" content="2019-02-20T13:08:57.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jvm的学习笔记">
-<meta name="twitter:description" content="JVM JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
+<meta name="twitter:description" content="JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
 
 
 
@@ -411,7 +411,7 @@
                 
               
 
-              <time title="Created: 2019-02-20 21:07:41" itemprop="dateCreated datePublished" datetime="2019-02-20T21:07:41+08:00">2019-02-20</time>
+              <time title="Created: 2019-02-20 21:08:57" itemprop="dateCreated datePublished" datetime="2019-02-20T21:08:57+08:00">2019-02-20</time>
             
 
             
@@ -484,7 +484,7 @@
       
 
       
-        <h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><blockquote>
+        <blockquote>
 <p>JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器.</p>
 <p>java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.</p>
 </blockquote>
@@ -867,7 +867,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM"><span class="nav-number">1.</span> <span class="nav-text">JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-JVM执行程序的过程"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">一 JVM执行程序的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-类加载的过程"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">二 类加载的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-对象的内存划分"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">三 对象的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-JVM的内存划分"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">四 JVM的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五-运行时常量池和字符串常量池的区别-intern"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">五 运行时常量池和字符串常量池的区别(intern)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六-内存泄漏和内存溢出"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">六 内存泄漏和内存溢出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七-GC中如何判断对象是否存活"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">七 GC中如何判断对象是否存活</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#八-垃圾收集算法"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">八 垃圾收集算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#九-常见的垃圾收集器"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">九 常见的垃圾收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十-什么情况下对象会进入老年代"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">十 什么情况下对象会进入老年代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十一-GC"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">十一 GC</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-JVM执行程序的过程"><span class="nav-number">1.</span> <span class="nav-text">一 JVM执行程序的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-类加载的过程"><span class="nav-number">2.</span> <span class="nav-text">二 类加载的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-对象的内存划分"><span class="nav-number">3.</span> <span class="nav-text">三 对象的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-JVM的内存划分"><span class="nav-number">4.</span> <span class="nav-text">四 JVM的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五-运行时常量池和字符串常量池的区别-intern"><span class="nav-number">5.</span> <span class="nav-text">五 运行时常量池和字符串常量池的区别(intern)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六-内存泄漏和内存溢出"><span class="nav-number">6.</span> <span class="nav-text">六 内存泄漏和内存溢出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七-GC中如何判断对象是否存活"><span class="nav-number">7.</span> <span class="nav-text">七 GC中如何判断对象是否存活</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#八-垃圾收集算法"><span class="nav-number">8.</span> <span class="nav-text">八 垃圾收集算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#九-常见的垃圾收集器"><span class="nav-number">9.</span> <span class="nav-text">九 常见的垃圾收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十-什么情况下对象会进入老年代"><span class="nav-number">10.</span> <span class="nav-text">十 什么情况下对象会进入老年代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十一-GC"><span class="nav-number">11.</span> <span class="nav-text">十一 GC</span></a></li></ol></div>
             
 
           </div>
