@@ -115,25 +115,25 @@
 
 
 
-  <meta name="description" content="在TCP层, 有个FLAGS字段, 这个字段有以下几个标识:   SYN : 建立连接,  FIN : 关闭连接,  ACK : 响应,  PSH : 有未分片的DATA数据传输,  RST : 连接重置.">
-<meta name="keywords" content="TCP">
+  <meta name="description" content="JVM JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
+<meta name="keywords" content="java,jvm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP的几种状态(笔记)">
-<meta property="og:url" content="http://yoursite.com/post/56550.html">
+<meta property="og:title" content="jvm的学习笔记">
+<meta property="og:url" content="http://yoursite.com/post/d6b23368.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="在TCP层, 有个FLAGS字段, 这个字段有以下几个标识:   SYN : 建立连接,  FIN : 关闭连接,  ACK : 响应,  PSH : 有未分片的DATA数据传输,  RST : 连接重置.">
+<meta property="og:description" content="JVM JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-21T07:20:02.480Z">
+<meta property="og:updated_time" content="2019-02-20T13:07:41.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TCP的几种状态(笔记)">
-<meta name="twitter:description" content="在TCP层, 有个FLAGS字段, 这个字段有以下几个标识:   SYN : 建立连接,  FIN : 关闭连接,  ACK : 响应,  PSH : 有未分片的DATA数据传输,  RST : 连接重置.">
+<meta name="twitter:title" content="jvm的学习笔记">
+<meta name="twitter:description" content="JVM JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器. java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/post/56550.html">
+  <link rel="canonical" href="http://yoursite.com/post/d6b23368.html">
 
 
 
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>TCP的几种状态(笔记) | Shotacon</title>
+  <title>jvm的学习笔记 | Shotacon</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/56550.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/d6b23368.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shotacon">
@@ -386,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TCP的几种状态(笔记)
+          <h1 class="post-title" itemprop="name headline">jvm的学习笔记
               
             
           </h1>
@@ -411,25 +411,9 @@
                 
               
 
-              <time title="Created: 2018-01-19 10:34:22" itemprop="dateCreated datePublished" datetime="2018-01-19T10:34:22+08:00">2018-01-19</time>
+              <time title="Created: 2019-02-20 21:07:41" itemprop="dateCreated datePublished" datetime="2019-02-20T21:07:41+08:00">2019-02-20</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-12-21 15:20:02" itemprop="dateModified" datetime="2018-12-21T15:20:02+08:00">2018-12-21</time>
-              
             
           </span>
 
@@ -445,7 +429,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/TCP/" itemprop="url" rel="index"><span itemprop="name">TCP</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -460,8 +444,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/post/56550.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/post/56550.html" itemprop="commentCount"></span>
+                <a href="/post/d6b23368.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/post/d6b23368.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -469,7 +453,7 @@
 
           
           
-             <span id="/post/56550.html" class="leancloud_visitors" data-flag-title="TCP的几种状态(笔记)">
+             <span id="/post/d6b23368.html" class="leancloud_visitors" data-flag-title="jvm的学习笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -500,43 +484,122 @@
       
 
       
-        <p>在TCP层, 有个FLAGS字段, 这个字段有以下几个标识: </p>
-<ul>
-<li>SYN : 建立连接, </li>
-<li>FIN : 关闭连接, </li>
-<li>ACK : 响应, </li>
-<li>PSH : 有未分片的DATA数据传输, </li>
-<li>RST : 连接重置. </li>
-</ul>
+        <h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><blockquote>
+<p>JVM是java的核心和基础, 介于java编译器和操作系统之间的虚拟处理器.</p>
+<p>java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.</p>
+</blockquote>
 <a id="more"></a>
-<p>其中, ACK是可能与SYN, FIN等同时使用的.</p>
-<p>比如SYN和ACK可能同时为1, 它表示的就是建立连接之后的响应, 如果只是单个的一个SYN, 它表示的只是建立连接, TCP的几次握手就是通过这样的ACK表现出来的.<br>但SYN与FIN是不会同时为1的, 因为前者表示的是建立连接, 而后者表示的是断开连接. </p>
-<p>RST一般是在FIN之后才会出现为1的情况, 表示的是连接重置. 一般地, 当出现FIN包或RST包时, 我们便认为客户端与服务器端断开了连接；而当出现SYN和SYN＋ACK包时, 我们认为客户端与服务器建立了一个连接. </p>
-<p>PSH为1的情况, 一般只出现在 DATA内容不为0的包中, 也就是说PSH为1表示的是有真正的TCP数据包内容被传递.<br>TCP的连接建立和连接关闭, 都是通过请求－响应的模式完成的. </p>
-<h5 id="概念补充-TCP三次握手"><a href="#概念补充-TCP三次握手" class="headerlink" title="概念补充-TCP三次握手:"></a>概念补充-TCP三次握手:</h5><p>TCP(Transmission Control Protocol)传输控制协议是主机对主机层的传输控制协议, 提供可靠的连接服务, 采用三次握手确认建立一个连接.</p>
-<p>位码即tcp标志位, 有6种标示: </p>
-<ol>
-<li>SYN(synchronous建立联机)</li>
-<li>ACK(acknowledgement 确认)</li>
-<li>PSH(push传送)</li>
-<li>FIN(finish结束)</li>
-<li>RST(reset重置)</li>
-<li>URG(urgent紧急)</li>
+<h4 id="一-JVM执行程序的过程"><a href="#一-JVM执行程序的过程" class="headerlink" title="一 JVM执行程序的过程:"></a>一 JVM执行程序的过程:</h4><ol>
+<li>加载 .class 文件</li>
+<li>管理并分配内存</li>
+<li>执行垃圾收集</li>
 </ol>
-<p>其他如: Sequence number(顺序号码), Acknowledge number(确认号码) 等.</p>
-<ul>
-<li>第一次握手：主机A发送位码为syn＝1, 随机产生seq number=1234567的数据包到服务器, 主机B由SYN=1知道, A要求建立联机;</li>
-<li>第二次握手: 主机B收到请求后要确认联机信息, 向A发送ack number=(主机A的seq+1), syn=1, ack=1, 随机产生seq=7654321的包;</li>
-<li>第三次握手: 主机A收到后检查ack number是否正确, 即第一次发送的seq number+1, 以及位码ack是否为1, 若正确, 主机A会再发送ack number=(主机B的seq+1), ack=1, 主机B收到后确认seq值与ack=1则连接建立成功. </li>
-</ul>
-<p>完成三次握手, 主机A与主机B开始传送数据. </p>
-<p>在TCP/IP协议中, TCP协议提供可靠的连接服务, 采用三次握手建立一个连接.   </p>
-<ul>
-<li>第一次握手: 建立连接时, 客户端发送syn包(syn=j)到服务器, 并进入SYN_SEND状态, 等待服务器确认;</li>
-<li>第二次握手: 服务器收到syn包, 必须确认客户的SYN（ack=j+1）, 同时自己也发送一个SYN包（syn=k）, 即SYN+ACK包, 此时服务器进入SYN_RECV状态；</li>
-<li>第三次握手: 客户端收到服务器的SYN＋ACK包, 向服务器发送确认包ACK(ack=k+1), 此包发送完毕, 客户端和服务器进入ESTABLISHED状态, 完成三次握手. 完成三次握手, 客户端与服务器开始传送数据. </li>
-</ul>
-<p>摘自<a href="www.yunsec.net">中国云安网</a>, 原文链接:<a href="http://www.yunsec.net/a/school/wlcs/agreement/2012/0317/10262.html" target="_blank" rel="noopener">http://www.yunsec.net/a/school/wlcs/agreement/2012/0317/10262.html</a></p>
+<h4 id="二-类加载的过程"><a href="#二-类加载的过程" class="headerlink" title="二 类加载的过程:"></a>二 类加载的过程:</h4><blockquote>
+<p>类加载是指通过类的全限定名获取类的二进制字节流, 将字节流代表的静态存储结构转化为方法区的运行时数据结构. 在内存中生成这个类的class对象</p>
+</blockquote>
+<ol>
+<li>加载, 通过类的全限定名获取类的二进制字节流.</li>
+<li>连接, 包括:<ol>
+<li>验证class文件中字节流包含的信息符合当前虚拟机要求, 且不危害虚拟机自身安全.</li>
+<li>正式为类变量分配内存并设置类变量初始值.</li>
+<li>将常量池的符号引用替换为直接引用</li>
+</ol>
+</li>
+<li>根据程序员意愿初始化类变量.</li>
+</ol>
+<h4 id="三-对象的内存划分"><a href="#三-对象的内存划分" class="headerlink" title="三 对象的内存划分"></a>三 对象的内存划分</h4><ol>
+<li>对象头: 包含mark world和类型指针<ol>
+<li>mark world包含hash码, GC分代年龄, 锁状态标志等.</li>
+<li>类型指针是用来确定这个对象是哪个类的实例.</li>
+</ol>
+</li>
+<li>实例数据: 是对象存储的真正有效信息.</li>
+<li>对齐填充: hostspot虚拟机要求对象的大小必须是8字节的整数倍.</li>
+</ol>
+<h4 id="四-JVM的内存划分"><a href="#四-JVM的内存划分" class="headerlink" title="四 JVM的内存划分"></a>四 JVM的内存划分</h4><ol>
+<li><p>线程独享区</p>
+<ol>
+<li><p>java栈: </p>
+<p>存放栈帧, 每个栈帧对应被调用的一个方法, 其中包括局部变量表, 操作数栈, 指向运行时常量池的引用, 方法返回地址等.</p>
+</li>
+<li><p>本地方法栈</p>
+<p>与java栈作用和原理类似, 不过执行的都是本地方法.</p>
+</li>
+<li><p>程序计数器</p>
+<p>保存程序当前执行的指令地址.</p>
+</li>
+</ol>
+</li>
+<li><p>线程共享区</p>
+<ol>
+<li><p>堆</p>
+<p>用来存储对象和数组</p>
+</li>
+<li><p>方法区</p>
+<p>存储类信息, 静态变量, 常量, 编译后的代码.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="五-运行时常量池和字符串常量池的区别-intern"><a href="#五-运行时常量池和字符串常量池的区别-intern" class="headerlink" title="五 运行时常量池和字符串常量池的区别(intern)"></a>五 运行时常量池和字符串常量池的区别(intern)</h4><p>在new String(), 或调用intern方法时, 如果字符串常量池中不存在, 就会创建一个, 有则直接返回已存在的.</p>
+<p>在JDK1.6, 字符串常量池和运行时常量池都在方法区.</p>
+<p>自1.7开始, 字符串常量池被移动到堆中.</p>
+<h4 id="六-内存泄漏和内存溢出"><a href="#六-内存泄漏和内存溢出" class="headerlink" title="六 内存泄漏和内存溢出"></a>六 内存泄漏和内存溢出</h4><ol>
+<li><p>内存泄漏:</p>
+<p>分配出去的内存无法被回收</p>
+<p>常见的分析策略是查看当前的内存分配, 找出占用内存居高不下的对象, 在代码中进行优化.</p>
+</li>
+<li><p>内存溢出:</p>
+<p>程序需要分配的内存超过了系统能分配的范围.</p>
+</li>
+</ol>
+<h4 id="七-GC中如何判断对象是否存活"><a href="#七-GC中如何判断对象是否存活" class="headerlink" title="七 GC中如何判断对象是否存活"></a>七 GC中如何判断对象是否存活</h4><ol>
+<li><p>引用计数: 略</p>
+</li>
+<li><p>可达性分析法:</p>
+<p>到GC Root可达, 判定为不可回收的对象.</p>
+<p>GC Root是虚拟机栈, 本地方法栈, 方法区静态属性, 方法区常量所引用的对象</p>
+</li>
+</ol>
+<h4 id="八-垃圾收集算法"><a href="#八-垃圾收集算法" class="headerlink" title="八 垃圾收集算法"></a>八 垃圾收集算法</h4><ol>
+<li><p>标记-清除算法:</p>
+<p>标记所有对象, 标记完统一回收.</p>
+<p>效率不高, 且容易产生碎片</p>
+</li>
+<li><p>复制算法:</p>
+<p>将内存划分成一块大的Eden空间(80%)和两块小的Survivor空间(10%), 每次使用Eden和其中一块Survivor, 回收时, 将两者中存活的对象复制到空闲的Survivor中, 清空之前用到的空间. </p>
+<p>如果这块Survivor空间不够, 使用分配担保机制, 将多出的对象存在老年代.</p>
+</li>
+<li><p>标记-整理算法:</p>
+<p>标记出所有对象, 回收时让存活的对象向一端移动, 直接清理端边界外的内存.</p>
+</li>
+<li><p>分代收集算法:</p>
+<p>java堆分为新生代和老年代, 垃圾回收时, 新生代采用复制算法, 处理大量需要回收的对象, 老年代存活的对象较多, 使用标记-清除或者标记-整理.</p>
+</li>
+</ol>
+<h4 id="九-常见的垃圾收集器"><a href="#九-常见的垃圾收集器" class="headerlink" title="九 常见的垃圾收集器"></a>九 常见的垃圾收集器</h4><ol>
+<li>Serial: 单线程收集器</li>
+<li>ParNew: 新生代收集器, Serial的多线程版本</li>
+<li>Parallel Scavenge: 新生代收集器, 采用复制算法, 实现最大吞吐量</li>
+<li>Serial Old: Serial的老年代版本</li>
+<li>Parallel Old: ParNew的老年代版本</li>
+<li>CMS: 以获取最短停顿时间为目标的收集器<ol>
+<li>初始标记: 标记GC Root能直接关联到的对象</li>
+<li>并发标记: 进行GC Root Tracing</li>
+<li>重新标记: 修正并发标记期间用户线程继续工作导致的标记变动</li>
+<li>并发清除: 清除未被标记的对象</li>
+</ol>
+</li>
+<li>G1: 独立管理整个gc堆 ( 初始标记, 并发标记, 最终标记, 筛选回收 )</li>
+</ol>
+<h4 id="十-什么情况下对象会进入老年代"><a href="#十-什么情况下对象会进入老年代" class="headerlink" title="十 什么情况下对象会进入老年代"></a>十 什么情况下对象会进入老年代</h4><ol>
+<li>大对象(需要大量连续空间的对象), 常见的为很长的字符串或者数组</li>
+<li>长期存活的对象, 每度过一次Minor GC, 年龄+1, 增长到一定程度(默认为15, 可以通过MaxTenuringThreshold设置), 进入老年代</li>
+<li>动态年龄判断, 如果Survivor空间某个年龄的对象累计大小超出了其空间的一半(默认为50%, 可以通过TargetSurvivorRatio设置), 则大于或等于该年龄的对象都会进入老年代</li>
+<li>空间分配担保: 复制算法中会将无法容纳的对象进行处理</li>
+</ol>
+<h4 id="十一-GC"><a href="#十一-GC" class="headerlink" title="十一 GC"></a>十一 GC</h4><p>进行GC的时间是无法直接控制的, 只有当Eden区满了会出发minor GC, 老年代满了或调用System.gc会进行full GC.</p>
+<p>不过需要注意的是, 此函数建议JVM进行主GC, 虽然只是建议而非一定, 但很多情况下它会触发主GC, 从而增加主GC的频率, 也即增加了间歇性停顿的次数</p>
 
       
     </div>
@@ -560,7 +623,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TCP/" rel="tag"># TCP</a>
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/jvm/" rel="tag"># jvm</a>
           
         </div>
       
@@ -573,8 +638,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/post/52793.html" rel="next" title="在VPS上搭建ss或v2ray">
-                <i class="fa fa-chevron-left"></i> 在VPS上搭建ss或v2ray
+              <a href="/post/bb1895ee.html" rel="next" title="清理Twitter">
+                <i class="fa fa-chevron-left"></i> 清理Twitter
               </a>
             
           </div>
@@ -582,10 +647,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/post/46831.html" rel="prev" title="java导出dbf格式文件">
-                java导出dbf格式文件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -806,7 +867,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念补充-TCP三次握手"><span class="nav-number">1.</span> <span class="nav-text">概念补充-TCP三次握手:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM"><span class="nav-number">1.</span> <span class="nav-text">JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-JVM执行程序的过程"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">一 JVM执行程序的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-类加载的过程"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">二 类加载的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-对象的内存划分"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">三 对象的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-JVM的内存划分"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">四 JVM的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五-运行时常量池和字符串常量池的区别-intern"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">五 运行时常量池和字符串常量池的区别(intern)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六-内存泄漏和内存溢出"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">六 内存泄漏和内存溢出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七-GC中如何判断对象是否存活"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">七 GC中如何判断对象是否存活</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#八-垃圾收集算法"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">八 垃圾收集算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#九-常见的垃圾收集器"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">九 常见的垃圾收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十-什么情况下对象会进入老年代"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">十 什么情况下对象会进入老年代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十一-GC"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">十一 GC</span></a></li></ol></li></ol></div>
             
 
           </div>
