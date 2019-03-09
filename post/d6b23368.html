@@ -489,12 +489,12 @@
 <p>java编译器通过编译java源代码, 得到JVM能理解的代码或字节码文件, 通过JVM将每一条指令翻译成不同平台的机器码, 通过平台运行.</p>
 </blockquote>
 <a id="more"></a>
-<h4 id="一-JVM执行程序的过程"><a href="#一-JVM执行程序的过程" class="headerlink" title="一 JVM执行程序的过程:"></a>一 JVM执行程序的过程:</h4><ol>
+<h4><span id="一-jvm执行程序的过程">一 JVM执行程序的过程:</span></h4><ol>
 <li>加载 .class 文件</li>
 <li>管理并分配内存</li>
 <li>执行垃圾收集</li>
 </ol>
-<h4 id="二-类加载的过程"><a href="#二-类加载的过程" class="headerlink" title="二 类加载的过程:"></a>二 类加载的过程:</h4><blockquote>
+<h4><span id="二-类加载的过程">二 类加载的过程:</span></h4><blockquote>
 <p>类加载是指通过类的全限定名获取类的二进制字节流, 将字节流代表的静态存储结构转化为方法区的运行时数据结构. 在内存中生成这个类的class对象</p>
 </blockquote>
 <ol>
@@ -507,7 +507,7 @@
 </li>
 <li>根据程序员意愿初始化类变量.</li>
 </ol>
-<h4 id="三-对象的内存划分"><a href="#三-对象的内存划分" class="headerlink" title="三 对象的内存划分"></a>三 对象的内存划分</h4><ol>
+<h4><span id="三-对象的内存划分">三 对象的内存划分</span></h4><ol>
 <li>对象头: 包含mark world和类型指针<ol>
 <li>mark world包含hash码, GC分代年龄, 锁状态标志等.</li>
 <li>类型指针是用来确定这个对象是哪个类的实例.</li>
@@ -516,7 +516,7 @@
 <li>实例数据: 是对象存储的真正有效信息.</li>
 <li>对齐填充: hostspot虚拟机要求对象的大小必须是8字节的整数倍.</li>
 </ol>
-<h4 id="四-JVM的内存划分"><a href="#四-JVM的内存划分" class="headerlink" title="四 JVM的内存划分"></a>四 JVM的内存划分</h4><ol>
+<h4><span id="四-jvm的内存划分">四 JVM的内存划分</span></h4><ol>
 <li><p>线程独享区</p>
 <ol>
 <li><p>java栈: </p>
@@ -541,10 +541,10 @@
 </ol>
 </li>
 </ol>
-<h4 id="五-运行时常量池和字符串常量池的区别-intern"><a href="#五-运行时常量池和字符串常量池的区别-intern" class="headerlink" title="五 运行时常量池和字符串常量池的区别(intern)"></a>五 运行时常量池和字符串常量池的区别(intern)</h4><p>在new String(), 或调用intern方法时, 如果字符串常量池中不存在, 就会创建一个, 有则直接返回已存在的.</p>
+<h4><span id="五-运行时常量池和字符串常量池的区别intern">五 运行时常量池和字符串常量池的区别(intern)</span></h4><p>在new String(), 或调用intern方法时, 如果字符串常量池中不存在, 就会创建一个, 有则直接返回已存在的.</p>
 <p>在JDK1.6, 字符串常量池和运行时常量池都在方法区.</p>
 <p>自1.7开始, 字符串常量池被移动到堆中.</p>
-<h4 id="六-内存泄漏和内存溢出"><a href="#六-内存泄漏和内存溢出" class="headerlink" title="六 内存泄漏和内存溢出"></a>六 内存泄漏和内存溢出</h4><ol>
+<h4><span id="六-内存泄漏和内存溢出">六 内存泄漏和内存溢出</span></h4><ol>
 <li><p>内存泄漏:</p>
 <p>分配出去的内存无法被回收</p>
 <p>常见的分析策略是查看当前的内存分配, 找出占用内存居高不下的对象, 在代码中进行优化.</p>
@@ -553,7 +553,7 @@
 <p>程序需要分配的内存超过了系统能分配的范围.</p>
 </li>
 </ol>
-<h4 id="七-GC中如何判断对象是否存活"><a href="#七-GC中如何判断对象是否存活" class="headerlink" title="七 GC中如何判断对象是否存活"></a>七 GC中如何判断对象是否存活</h4><ol>
+<h4><span id="七-gc中如何判断对象是否存活">七 GC中如何判断对象是否存活</span></h4><ol>
 <li><p>引用计数: 略</p>
 </li>
 <li><p>可达性分析法:</p>
@@ -561,7 +561,7 @@
 <p>GC Root是虚拟机栈, 本地方法栈, 方法区静态属性, 方法区常量所引用的对象</p>
 </li>
 </ol>
-<h4 id="八-垃圾收集算法"><a href="#八-垃圾收集算法" class="headerlink" title="八 垃圾收集算法"></a>八 垃圾收集算法</h4><ol>
+<h4><span id="八-垃圾收集算法">八 垃圾收集算法</span></h4><ol>
 <li><p>标记-清除算法:</p>
 <p>标记所有对象, 标记完统一回收.</p>
 <p>效率不高, 且容易产生碎片</p>
@@ -577,7 +577,7 @@
 <p>java堆分为新生代和老年代, 垃圾回收时, 新生代采用复制算法, 处理大量需要回收的对象, 老年代存活的对象较多, 使用标记-清除或者标记-整理.</p>
 </li>
 </ol>
-<h4 id="九-常见的垃圾收集器"><a href="#九-常见的垃圾收集器" class="headerlink" title="九 常见的垃圾收集器"></a>九 常见的垃圾收集器</h4><ol>
+<h4><span id="九-常见的垃圾收集器">九 常见的垃圾收集器</span></h4><ol>
 <li>Serial: 单线程收集器</li>
 <li>ParNew: 新生代收集器, Serial的多线程版本</li>
 <li>Parallel Scavenge: 新生代收集器, 采用复制算法, 实现最大吞吐量</li>
@@ -592,13 +592,13 @@
 </li>
 <li>G1: 独立管理整个gc堆 ( 初始标记, 并发标记, 最终标记, 筛选回收 )</li>
 </ol>
-<h4 id="十-什么情况下对象会进入老年代"><a href="#十-什么情况下对象会进入老年代" class="headerlink" title="十 什么情况下对象会进入老年代"></a>十 什么情况下对象会进入老年代</h4><ol>
+<h4><span id="十-什么情况下对象会进入老年代">十 什么情况下对象会进入老年代</span></h4><ol>
 <li>大对象(需要大量连续空间的对象), 常见的为很长的字符串或者数组</li>
 <li>长期存活的对象, 每度过一次Minor GC, 年龄+1, 增长到一定程度(默认为15, 可以通过MaxTenuringThreshold设置), 进入老年代</li>
 <li>动态年龄判断, 如果Survivor空间某个年龄的对象累计大小超出了其空间的一半(默认为50%, 可以通过TargetSurvivorRatio设置), 则大于或等于该年龄的对象都会进入老年代</li>
 <li>空间分配担保: 复制算法中会将无法容纳的对象进行处理</li>
 </ol>
-<h4 id="十一-GC"><a href="#十一-GC" class="headerlink" title="十一 GC"></a>十一 GC</h4><p>进行GC的时间是无法直接控制的, 只有当Eden区满了会出发minor GC, 老年代满了或调用System.gc会进行full GC.</p>
+<h4><span id="十一-gc">十一 GC</span></h4><p>进行GC的时间是无法直接控制的, 只有当Eden区满了会出发minor GC, 老年代满了或调用System.gc会进行full GC.</p>
 <p>不过需要注意的是, 此函数建议JVM进行主GC, 虽然只是建议而非一定, 但很多情况下它会触发主GC, 从而增加主GC的频率, 也即增加了间歇性停顿的次数</p>
 
       
@@ -647,6 +647,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/44e3c230.html" rel="prev" title="Java常见面试题">
+                Java常见面试题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -722,7 +726,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -784,7 +788,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -867,7 +879,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一-JVM执行程序的过程"><span class="nav-number">1.</span> <span class="nav-text">一 JVM执行程序的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二-类加载的过程"><span class="nav-number">2.</span> <span class="nav-text">二 类加载的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三-对象的内存划分"><span class="nav-number">3.</span> <span class="nav-text">三 对象的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四-JVM的内存划分"><span class="nav-number">4.</span> <span class="nav-text">四 JVM的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五-运行时常量池和字符串常量池的区别-intern"><span class="nav-number">5.</span> <span class="nav-text">五 运行时常量池和字符串常量池的区别(intern)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六-内存泄漏和内存溢出"><span class="nav-number">6.</span> <span class="nav-text">六 内存泄漏和内存溢出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七-GC中如何判断对象是否存活"><span class="nav-number">7.</span> <span class="nav-text">七 GC中如何判断对象是否存活</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#八-垃圾收集算法"><span class="nav-number">8.</span> <span class="nav-text">八 垃圾收集算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#九-常见的垃圾收集器"><span class="nav-number">9.</span> <span class="nav-text">九 常见的垃圾收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十-什么情况下对象会进入老年代"><span class="nav-number">10.</span> <span class="nav-text">十 什么情况下对象会进入老年代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#十一-GC"><span class="nav-number">11.</span> <span class="nav-text">十一 GC</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">一 JVM执行程序的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">二 类加载的过程:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">三 对象的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">四 JVM的内存划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">五 运行时常量池和字符串常量池的区别(intern)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">六 内存泄漏和内存溢出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">七 GC中如何判断对象是否存活</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">八 垃圾收集算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">九 常见的垃圾收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">十 什么情况下对象会进入老年代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">11.</span> <span class="nav-text">十一 GC</span></a></li></ol></div>
             
 
           </div>

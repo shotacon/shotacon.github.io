@@ -506,9 +506,9 @@
 <p>逐步更新中.</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException"><a href="#1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException" class="headerlink" title="1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException"></a>1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</h2><p>这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有文件夹未被创建, 就抛出此异常.</p>
+<h2><span id="1-filescreatefilepath或者fileswrite时抛出nosuchfileexception">1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</span></h2><p>这两个方法在path含有路径时, 会直接去创建目标文件, 所以当路径中间有文件夹未被创建, 就抛出此异常.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加个判断就OK了</span></span><br><span class="line">Path path = Paths.get(dir);</span><br><span class="line"><span class="keyword">if</span> (!Files.exists(path))</span><br><span class="line">	Files.createDirectories(path);</span><br></pre></td></tr></table></figure>
-<h2 id="2-java-nio-charset-MalformedInputException-Input-length-1"><a href="#2-java-nio-charset-MalformedInputException-Input-length-1" class="headerlink" title="2. java.nio.charset.MalformedInputException: Input length = 1"></a>2. java.nio.charset.MalformedInputException: <strong>Input</strong> <strong>length</strong> <strong>=</strong> <strong>1</strong></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Files读取文件的默认编码是UTF-8</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Stream&lt;String&gt; <span class="title">lines</span><span class="params">(Path path)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> lines(path, StandardCharsets.UTF_8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2><span id="2-javaniocharsetmalformedinputexception-input-length-1">2. java.nio.charset.MalformedInputException: <strong>Input</strong> <strong>length</strong> <strong>=</strong> <strong>1</strong></span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Files读取文件的默认编码是UTF-8</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Stream&lt;String&gt; <span class="title">lines</span><span class="params">(Path path)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> lines(path, StandardCharsets.UTF_8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通常该异常是因为读取的文件编码不是utf-8引起的.</p>
 <p>但我这次引起是因为mac创建的<a href="https://zh.wikipedia.org/wiki/.DS_Store" target="_blank" rel="noopener">DS_Store</a>文件, 该文件是mac用于贮存目录自定义属性, 例如文件夹们的图标位置或者背景色之类.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 特意的加了文件名的判断. 避免错误的解析DS_Store文件.</span></span><br><span class="line">List&lt;Path&gt; fileList = Files.list(Paths.get(basePath))</span><br><span class="line">				.filter(path -&gt; !Files.isDirectory(path) &amp;&amp; !path.getFileName().toString().contains(<span class="string">"DS_Store"</span>))</span><br><span class="line">				.collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
@@ -644,7 +644,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -706,7 +706,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -789,7 +797,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Files-createFile-path-或者Files-write-时抛出NoSuchFileException"><span class="nav-number">1.</span> <span class="nav-text">1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-java-nio-charset-MalformedInputException-Input-length-1"><span class="nav-number">2.</span> <span class="nav-text">2. java.nio.charset.MalformedInputException: Input length = 1</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1. Files.createFile(path)或者Files.write()时抛出NoSuchFileException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">2. java.nio.charset.MalformedInputException: Input length = 1</span></a></li></ol></div>
             
 
           </div>
