@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="Shotacon">
 <meta property="og:description" content="逐步更新中.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-09T07:04:45.512Z">
+<meta property="og:updated_time" content="2019-03-10T06:08:54.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java常见面试题">
 <meta name="twitter:description" content="逐步更新中.">
@@ -411,7 +411,7 @@
                 
               
 
-              <time title="Created: 2019-03-09 15:04:45" itemprop="dateCreated datePublished" datetime="2019-03-09T15:04:45+08:00">2019-03-09</time>
+              <time title="Created: 2019-03-10 14:08:54" itemprop="dateCreated datePublished" datetime="2019-03-10T14:08:54+08:00">2019-03-10</time>
             
 
             
@@ -488,7 +488,141 @@
 <p>逐步更新中.</p>
 </blockquote>
 <a id="more"></a>
-<h2><span id="java基础常见面试题待补充">Java基础常见面试题(待补充)</span></h2><h2><span id="spring常见面试题仅常见">Spring常见面试题(仅常见)</span></h2><h3><span id="1-你对spring有什么了解really-要这么问">1. 你对Spring有什么了解(Really? 要这么问?)</span></h3><ol>
+<!-- toc -->
+<ul>
+<li><a href="#java基础常见面试题仅浅显答案">Java基础常见面试题(仅浅显答案)</a><ul>
+<li><a href="#1-数组和链表">1. 数组和链表</a></li>
+<li><a href="#2-集合类">2. 集合类</a></li>
+<li><a href="#3-线程">3. 线程</a></li>
+</ul>
+</li>
+<li><a href="#spring常见面试题仅常见">Spring常见面试题(仅常见)</a><ul>
+<li><a href="#1-你对spring有什么了解really-要这么问">1. 你对Spring有什么了解(Really? 要这么问?)</a></li>
+<li><a href="#2-spring的ioc和aop">2. Spring的IOC和AOP</a></li>
+<li><a href="#3-核心容器application-context上下文">3. 核心容器Application Context(上下文)</a></li>
+<li><a href="#4-aop是什么-原理-配置-场景">4. AOP是什么, 原理, 配置, 场景</a></li>
+<li><a href="#5-ioc">5. IOC</a></li>
+<li><a href="#6-beanfactory和application-context的区别">6. BeanFactory和Application Context的区别</a></li>
+<li><a href="#7-spring框架中的单例bean是线程安全的吗">7. Spring框架中的单例bean是线程安全的吗?</a></li>
+<li><a href="#8-autowired和resource的区别">8. @Autowired和@Resource的区别</a></li>
+<li><a href="#9-spring支持的事务管理类型">9. Spring支持的事务管理类型</a></li>
+<li><a href="#10-springmvc的请求流程">10. SpringMVC的请求流程</a></li>
+<li><a href="#11-controller和restcontroller的区别">11. @Controller和@RestController的区别</a></li>
+</ul>
+</li>
+<li><a href="#spring-boot常见面试题近常见">Spring Boot常见面试题(近常见)</a><ul>
+<li><a href="#1-springboot是什么-和springmvc有什么区别">1. SpringBoot是什么? 和SpringMVC有什么区别?</a></li>
+<li><a href="#2-springboot的核心配置有什么-区别是什么">2. SpringBoot的核心配置有什么? 区别是什么?</a></li>
+<li><a href="#3-springboot的核心注解是哪个-都包含什么功能">3. SpringBoot的核心注解是哪个? 都包含什么功能?</a></li>
+<li><a href="#4-springboot的自动配置原理">4. SpringBoot的自动配置原理</a></li>
+<li><a href="#5-怎么在springboot服务启动时加载一些代码">5. 怎么在SpringBoot服务启动时加载一些代码</a></li>
+<li><a href="#6-springboot读取配置的方式">6. SpringBoot读取配置的方式</a></li>
+<li><a href="#7-实现热部署的方式">7. 实现热部署的方式</a></li>
+</ul>
+</li>
+<li><a href="#spring-cloud常见面试题拙见-较少">Spring Cloud常见面试题(拙见, 较少)</a><ul>
+<li><a href="#1-springcloud和dubbo的区别">1. SpringCloud和Dubbo的区别</a></li>
+<li><a href="#2-eureka和zookeeper的区别">2. Eureka和ZooKeeper的区别</a></li>
+<li><a href="#4-springcloud中如何独立通讯">4. SpringCloud中如何独立通讯</a></li>
+<li><a href="#5-服务熔断和服务降级">5. 服务熔断和服务降级</a></li>
+<li><a href="#6-微服务技术栈都有哪些">6. 微服务技术栈都有哪些?</a></li>
+</ul>
+</li>
+<li><a href="#dubbo常见面试题">Dubbo常见面试题</a></li>
+<li><a href="#netty常见面试题">Netty常见面试题</a></li>
+<li><a href="#mybatis常见面试题都是一些常见简单的">Mybatis常见面试题(都是一些常见简单的)</a><ul>
+<li><a href="#1-和的区别">1. #{}和${}的区别</a></li>
+<li><a href="#2-当实体类中的属性名和表中的字段名不一样">2. 当实体类中的属性名和表中的字段名不一样</a></li>
+<li><a href="#3-如何在插入后获取主键">3. 如何在插入后获取主键</a></li>
+<li><a href="#4-在mapper中如何传递多个参数">4. 在mapper中如何传递多个参数</a></li>
+<li><a href="#5-动态sql-都有哪些标签-执行原理">5. 动态sql, 都有哪些标签, 执行原理</a></li>
+<li><a href="#6-在xml映射文件中-不同的xml映射文件id是否可以重复">6. 在xml映射文件中, 不同的xml映射文件id是否可以重复</a></li>
+<li><a href="#7-dao接口和xml的映射工作原理是什么-能否重载">7. dao接口和xml的映射工作原理是什么? 能否重载?</a></li>
+<li><a href="#8-mybatis的分页和分页插件的分页有什么区别">8. Mybatis的分页和分页插件的分页有什么区别?</a></li>
+</ul>
+</li>
+<li><a href="#mysql常见面试题">MySQL常见面试题</a><ul>
+<li><a href="#1-常见的引擎和区别">1. 常见的引擎和区别</a></li>
+<li><a href="#2-意向锁">2. 意向锁</a></li>
+<li><a href="#3-mysql的事务特征和隔离级别">3. MySQL的事务特征和隔离级别</a></li>
+<li><a href="#4-索引">4. 索引</a></li>
+<li><a href="#5-sql编写">5. SQL编写</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h2><span id="java基础常见面试题仅浅显答案">Java基础常见面试题(仅浅显答案)</span></h2><h3><span id="1-数组和链表">1. 数组和链表</span></h3><ol>
+<li>数组是将元素在内存中连续存放, 通过下标迅速访问, 但是插入元素可能会导致移动大量的元素, 删除同理.</li>
+<li>链表的元素在内存中不是顺序排序, 而是通过元素中的指针连在一起, 在访问时只能从第一个开始一个个的走. 但是增加和删除只需要修改元素指针即可.</li>
+</ol>
+<h3><span id="2-集合类">2. 集合类</span></h3><ol>
+<li><p>常见的集合类接口有List和Set, Set是一种不包含重复元素的集合.</p>
+</li>
+<li><p>常见的List实现有:</p>
+<ol>
+<li>ArrayList: 有序可变数组, 允许null, 线程不安全.</li>
+<li>LinkedList: 有序链表, 允许null, 线程不安全, 通常用来实现队列(queue)或堆栈(stack).</li>
+<li>Vector: 类似ArrayList, 使用synchronized同步, 线程安全.</li>
+<li>Stack: 继承自Vector, 实现了一个先进后出的堆栈. 具有基本的push和pop方法.</li>
+</ol>
+</li>
+<li><p>set: 无序列表, 元素不可重复, 否则覆盖. HashSet中不能重复是由HashMap的key实现的, 但本身是线性结构.</p>
+</li>
+<li><p>Map: 键值对的集合, key不允许重复</p>
+<ol>
+<li><p>HashMap: 线程不安全, 数组+链表的结构, 采用链地址法解决哈希碰撞, 初始长度16, 扩容为2倍, 初始长度自定义为奇数则会顺延到最近的一个2的倍数值. JDK1.8后在扩容到64时会转为红黑树.</p>
+</li>
+<li><p>HashTable: 线程安全的HashMap, 使用synchronized同步, 效率慢. 不允许空键值对.</p>
+</li>
+<li><p>TreeMap: 线程不安全, 基于红黑树实现, 无调优选项, 因为总处于平衡状态.</p>
+</li>
+<li><p>ConCurrentHashMap: 线程安全的HashMap, JDK1.7中采用分段锁实现线程安全, Segment继承于ReentrantLock, 理论上支持Segment数组数量的线程并发, 当一个线程占用锁访问一个Segment时, 不会影响其他的Segment. value和链表都是使用volatile修饰, 保证透明度.get的时候不需要加锁.</p>
+<p>  </p><p>JDK1.8中采用cas+synchronized保证并发安全, HashEntry换成了Node, 作用一样. 和HashMap一样也采用了红黑树结构.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3><span id="3-线程">3. 线程</span></h3><ol>
+<li><p>创建线程的方式</p>
+<ol>
+<li><p>继承Thread类, run()是方法实现, 启动时用start().</p>
+</li>
+<li><p>实现Runnable/Callable接口, Callable有返回值(Future)</p>
+</li>
+<li><p>线程池, ThreadPoolExecutor(核心线程数, 最大线程数, 超时时间, 时间单位, 队列, 线程工厂(主要用来创建线程, 比如可以指定线程的名字, 非必填), handler(如果线程池满了, 新任务的处理方式, 非必填)).</p>
+<p><a href="https://blog.csdn.net/Jack_SivenChen/article/details/53394058" target="_blank" rel="noopener">ThreadPoolExecutor详解</a></p>
+</li>
+</ol>
+</li>
+<li><p>java提供的线程池:</p>
+<ol>
+<li>newFixedThreadPool: 固定大小的线程池.</li>
+<li>newCachedThreadPool: 可缓存线程池, 一般不用, 因为初始化最大线程数是Integer.MAX_VALUE.</li>
+<li>newScheduledThreadPool: 定长线程池, 常用于定时及周期性任务执行.</li>
+<li>newSingleThreadExecutor: 单线程线程池, 不适用于并发.</li>
+</ol>
+</li>
+<li><p>阻塞队列</p>
+<ol>
+<li>ArrayBlockingQueue: 有边界的阻塞队列, 内部是一个数组, 且初始化后不能改变容量.</li>
+<li>DelayQueue: 内部元素必须实现 java.util.concurrent.Delayed接口, 常用于定时关闭链接, 缓存对象, 超时处理等.</li>
+<li><strong>LinkedBlockingQueue(最常用)</strong>: 无边界队列, 由链表实现. 未指定大小时默认为Integer最大值. 所以一般会指定一个值, 否则可能会撑爆JVM.</li>
+<li>PriorityBlockingQueue: 无边界队列. 允许插入null对象. 且内部元素必须实现java.lang.Comparable接口.</li>
+<li>SynchronousQueue: 单元素队列, 插入一个元素后阻塞, 除非这个元素被消费.</li>
+</ol>
+</li>
+<li><p>线程的几种状态</p>
+<ol>
+<li>初始(NEW): 新创建了一个线程对象, 但还没调用start()方法.</li>
+<li>运行(RUNNABLE): 就绪(ready)和运行中(running)都被认为是运行状态.</li>
+<li>阻塞(BLOCKED): 阻塞于锁.</li>
+<li>等待(WAITING): 线程等待被唤醒.</li>
+<li>超时等待(TIMED_WAITING): 于等待不同, 可以超时后返回.</li>
+<li>终止(TERMINATED): 表示线程执行完毕.</li>
+</ol>
+</li>
+</ol>
+<h2><span id="spring常见面试题仅常见">Spring常见面试题(仅常见)</span></h2><h3><span id="1-你对spring有什么了解really-要这么问">1. 你对Spring有什么了解(Really? 要这么问?)</span></h3><ol>
 <li>Spring是一个java企业级应用的轻量级开源开发框架. 简化了java应用开发.</li>
 <li>Spring的核心是IOC和AOP</li>
 </ol>
@@ -642,7 +776,96 @@
 <li>Mybatis的分页是通过针对ResultSet结果集执行的内存分页.</li>
 <li>分页插件是通过Mybatis提供的插件接口, 拦截sql进行物理分页的参数拼接(limit x, y).</li>
 </ol>
-<h2><span id="mysql常见面试题">MySQL常见面试题</span></h2>
+<h2><span id="mysql常见面试题">MySQL常见面试题</span></h2><h3><span id="1-常见的引擎和区别">1. 常见的引擎和区别</span></h3><ol>
+<li>InnoDB和MyISAM</li>
+<li>InnoDB支持事务, MyISAM不支持, InnoDB执行每一条sql都会默认封装成事务自动提交.</li>
+<li>InnoDB支持外键, MyISAM不支持, 包含外键的InnoDB表转为MyISAM会失败.</li>
+<li>InnoDB是聚集索引, 数据文件和索引是绑在一起的, 必须有主键. 索引查询也会先查询到主键, 再通过主键查询到数据. 所以主键不应该太大, 会导致其他索引也很大. MyISAM是非聚集索引, 索引是保存数据文件的指针, 主键和其他索引是独立的.</li>
+<li>InnoDB不保存表的行数, count时为全表扫描. MyISAM用一个变量保存了整个表的行数, count时直接返回.</li>
+<li>InnoDB不支持全文索引, MyISAM支持, 所以在查询效率上MyISAM更高.</li>
+<li>InnoDB提供行锁, MyISAM不提供.</li>
+</ol>
+<h3><span id="2-意向锁">2. 意向锁</span></h3><ol>
+<li>首先InnoDB引擎支持行锁, 行锁分为:<ol>
+<li>共享锁: 一个事务读一行的数据, 阻止其他事务获得这一行数据的排他锁.</li>
+<li>排他锁: 一个事务对一行数据进行修改, 阻止其他事务获得这一行数据的共享锁和排他锁.</li>
+</ol>
+</li>
+<li>当一个读取的事务A需要读a行, 在数据库内部会判断在给a行加共享锁之前先取得<strong>意向共享锁</strong>.</li>
+<li>当一个修改的事务B需要修改b行, 在数据库内部会判断给b行加排他锁之前先取得<strong>意向排他锁</strong>.</li>
+<li>InnoDB的锁是通过索引上的索引项实现的, 当使用非索引条件检索数据则会变为表锁.</li>
+<li>意向锁可以通过显式的在select语句后面加LOCK IN SHARE MODE和FOR UPDATE进行加锁. 但注意事务不要造成死锁.</li>
+</ol>
+<h3><span id="3-mysql的事务特征和隔离级别">3. MySQL的事务特征和隔离级别</span></h3><ol>
+<li>事务具有4个特征: <ol>
+<li>原子性(A): 事务中要么都成功, 要么都失败.</li>
+<li>一致性(C): 事务的执行结果必须是从一个一致性状态变到另一个一致性状态. 比如转账的前后金额变化.</li>
+<li>隔离性(I): 事务的执行不能受到其他事务的干扰.</li>
+<li>持久性(D): 事务一旦提交, 对数据库的改变就是永久性的.</li>
+</ol>
+</li>
+<li>隔离级别有4种:<ol>
+<li>读未提交: 脏读.</li>
+<li>读已提交: 大部分数据库的默认隔离级别, 但不是MySQL的. 也叫不可重复读.</li>
+<li>可重复读: <strong>MySQL的默认隔离级别</strong>. 会出现幻读. 使用其作为默认隔离级别主要因为语句级的Binlog, 详情请自行查询.</li>
+<li>串行化: 强制排序执行.</li>
+</ol>
+</li>
+</ol>
+<h3><span id="4-索引">4. 索引</span></h3><ol>
+<li>实现方式有BTREE(默认)和HASH.</li>
+<li>类型分三种:<ol>
+<li>普通索引: 无任何约束.</li>
+<li>唯一索引: 具有唯一性约束. 可有多个唯一索引.</li>
+<li>主键索引: 特殊的唯一索引, 不允许有空值. 一个表只能有一个主键索引.</li>
+<li>复合索引: 多个列组合一起创建索引, 可以是普通也可以是唯一, 覆盖多个列.</li>
+</ol>
+</li>
+<li>创建原则:<ol>
+<li>最适合的列是出现在where或on字句中的列, 或者连接字句中的列. 而不是出现在select关键字后面的列.</li>
+<li>索引列的基数越大, 数据区分度越高, 效果越好.</li>
+<li>根据情况创建复合索引, 更好的提高查询效率.</li>
+<li>避免创建过多的索引, 会额外占用磁盘空间, 降低写操作的效率. </li>
+<li>主键尽量选择较短的数据类型.</li>
+</ol>
+</li>
+<li>索引失效的情况:<ol>
+<li>复合索引的乱序使用.</li>
+<li>LIKE关键字, %不能在前, 可用position代替.</li>
+<li>null值其实会走索引, 但是会导致索引和索引统计更复杂.</li>
+<li>当数据库判断使用索引比全表扫描还慢时, 比如where id&gt;1 and id&lt;100</li>
+<li>or关键字前面的条件中的列有索引, 后面的没有, 则都不会生效.</li>
+<li>字符串类型的列在查询时一定要加引号, 否则不会走索引.</li>
+<li>索引上做计算或函数或类型转换.</li>
+<li>范围条件(between, &lt;, &gt;)右边的列将不走索引, 比如where age&gt;10 and name = ‘tom’</li>
+<li>&lt;,&gt;,!= 无法走索引.</li>
+<li>is null,  is not null无法走索引</li>
+</ol>
+</li>
+<li>优化<ol>
+<li>用exists代替in</li>
+<li>避免在where字句中进行表达式或者子查询</li>
+<li>or可以换成union.</li>
+<li>in的列表中, 将出现最频繁的放在前面, 可以减少判断次数.</li>
+<li>尽量使用&gt;=而不是&gt;</li>
+<li><a href="https://zhuanlan.zhihu.com/p/48385127" target="_blank" rel="noopener">更多的查看这里</a>.</li>
+</ol>
+</li>
+</ol>
+<h3><span id="5-sql编写">5. SQL编写</span></h3><blockquote>
+<p>学生表(Student), 课程表(Course), 教师表(Teacher), 成绩表(Score)</p>
+</blockquote>
+<ol>
+<li><p>查询平均成绩大于60分的学生学号和平均成绩</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> s.sno <span class="keyword">as</span> <span class="string">'学号'</span>, <span class="keyword">avg</span>(s.score) <span class="keyword">as</span> <span class="string">'平均成绩'</span> <span class="keyword">from</span> Score s <span class="keyword">group</span> <span class="keyword">by</span> s.sno <span class="keyword">having</span> <span class="keyword">avg</span>(s.score)&gt;<span class="number">60</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询至少选修两门课的学生学号</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> s.sno <span class="keyword">from</span> Score s <span class="keyword">group</span> <span class="keyword">by</span> s.sno <span class="keyword">having</span> <span class="keyword">count</span>(s.sno)&gt;=<span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/38354000" target="_blank" rel="noopener">其他参考</a></p>
+</li>
+</ol>
+
       
     </div>
 
@@ -923,7 +1146,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Java基础常见面试题(待补充)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Spring常见面试题(仅常见)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">1. 你对Spring有什么了解(Really? 要这么问?)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">2. Spring的IOC和AOP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.3.</span> <span class="nav-text">3. 核心容器Application Context(上下文)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.4.</span> <span class="nav-text">4. AOP是什么, 原理, 配置, 场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.5.</span> <span class="nav-text">5. IOC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.6.</span> <span class="nav-text">6. BeanFactory和Application Context的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.7.</span> <span class="nav-text">7. Spring框架中的单例bean是线程安全的吗?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.8.</span> <span class="nav-text">8. @Autowired和@Resource的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.9.</span> <span class="nav-text">9. Spring支持的事务管理类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.10.</span> <span class="nav-text">10. SpringMVC的请求流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.11.</span> <span class="nav-text">11. @Controller和@RestController的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Spring Boot常见面试题(近常见)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">1. SpringBoot是什么? 和SpringMVC有什么区别?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.2.</span> <span class="nav-text">2. SpringBoot的核心配置有什么? 区别是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.3.</span> <span class="nav-text">3. SpringBoot的核心注解是哪个? 都包含什么功能?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.4.</span> <span class="nav-text">4. SpringBoot的自动配置原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.5.</span> <span class="nav-text">5. 怎么在SpringBoot服务启动时加载一些代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.6.</span> <span class="nav-text">6. SpringBoot读取配置的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.7.</span> <span class="nav-text">7. 实现热部署的方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">Spring Cloud常见面试题(拙见, 较少)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.</span> <span class="nav-text">1. SpringCloud和Dubbo的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.2.</span> <span class="nav-text">2. Eureka和ZooKeeper的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.3.</span> <span class="nav-text">4. SpringCloud中如何独立通讯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.4.</span> <span class="nav-text">5. 服务熔断和服务降级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.5.</span> <span class="nav-text">6. 微服务技术栈都有哪些?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Dubbo常见面试题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">Netty常见面试题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">Mybatis常见面试题(都是一些常见简单的)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.1.</span> <span class="nav-text">1. #{}和${}的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.2.</span> <span class="nav-text">2. 当实体类中的属性名和表中的字段名不一样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.3.</span> <span class="nav-text">3. 如何在插入后获取主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.4.</span> <span class="nav-text">4. 在mapper中如何传递多个参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.5.</span> <span class="nav-text">5. 动态sql, 都有哪些标签, 执行原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.6.</span> <span class="nav-text">6. 在xml映射文件中, 不同的xml映射文件id是否可以重复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.7.</span> <span class="nav-text">7. dao接口和xml的映射工作原理是什么? 能否重载?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.8.</span> <span class="nav-text">8. Mybatis的分页和分页插件的分页有什么区别?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">MySQL常见面试题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Java基础常见面试题(仅浅显答案)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">1. 数组和链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">2. 集合类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">3. 线程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Spring常见面试题(仅常见)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">1. 你对Spring有什么了解(Really? 要这么问?)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">2. Spring的IOC和AOP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.3.</span> <span class="nav-text">3. 核心容器Application Context(上下文)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.4.</span> <span class="nav-text">4. AOP是什么, 原理, 配置, 场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.5.</span> <span class="nav-text">5. IOC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.6.</span> <span class="nav-text">6. BeanFactory和Application Context的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.7.</span> <span class="nav-text">7. Spring框架中的单例bean是线程安全的吗?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.8.</span> <span class="nav-text">8. @Autowired和@Resource的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.9.</span> <span class="nav-text">9. Spring支持的事务管理类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.10.</span> <span class="nav-text">10. SpringMVC的请求流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.11.</span> <span class="nav-text">11. @Controller和@RestController的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Spring Boot常见面试题(近常见)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">1. SpringBoot是什么? 和SpringMVC有什么区别?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.2.</span> <span class="nav-text">2. SpringBoot的核心配置有什么? 区别是什么?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.3.</span> <span class="nav-text">3. SpringBoot的核心注解是哪个? 都包含什么功能?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.4.</span> <span class="nav-text">4. SpringBoot的自动配置原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.5.</span> <span class="nav-text">5. 怎么在SpringBoot服务启动时加载一些代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.6.</span> <span class="nav-text">6. SpringBoot读取配置的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.7.</span> <span class="nav-text">7. 实现热部署的方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">Spring Cloud常见面试题(拙见, 较少)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.</span> <span class="nav-text">1. SpringCloud和Dubbo的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.2.</span> <span class="nav-text">2. Eureka和ZooKeeper的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.3.</span> <span class="nav-text">4. SpringCloud中如何独立通讯</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.4.</span> <span class="nav-text">5. 服务熔断和服务降级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.5.</span> <span class="nav-text">6. 微服务技术栈都有哪些?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Dubbo常见面试题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">Netty常见面试题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">Mybatis常见面试题(都是一些常见简单的)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.1.</span> <span class="nav-text">1. #{}和${}的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.2.</span> <span class="nav-text">2. 当实体类中的属性名和表中的字段名不一样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.3.</span> <span class="nav-text">3. 如何在插入后获取主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.4.</span> <span class="nav-text">4. 在mapper中如何传递多个参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.5.</span> <span class="nav-text">5. 动态sql, 都有哪些标签, 执行原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.6.</span> <span class="nav-text">6. 在xml映射文件中, 不同的xml映射文件id是否可以重复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.7.</span> <span class="nav-text">7. dao接口和xml的映射工作原理是什么? 能否重载?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.8.</span> <span class="nav-text">8. Mybatis的分页和分页插件的分页有什么区别?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">MySQL常见面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">8.1.</span> <span class="nav-text">1. 常见的引擎和区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">8.2.</span> <span class="nav-text">2. 意向锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">8.3.</span> <span class="nav-text">3. MySQL的事务特征和隔离级别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">8.4.</span> <span class="nav-text">4. 索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">8.5.</span> <span class="nav-text">5. SQL编写</span></a></li></ol></li></ol></div>
             
 
           </div>
