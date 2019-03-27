@@ -115,25 +115,28 @@
 
 
 
-  <meta name="description" content="ss当初购买的是vultr的服务器, 系统为CentOs7 X64v2ray是用的Google Cloud, 俗称GCP, 系统同为CentOs7 X64">
-<meta name="keywords" content="shadowsocks,v2ray">
+  <meta name="description" content="测试String, StringBuffer, StringBuilder的拼接速度, 内存使用情况比较. 测试采用随机数拼接, 指定数量的随机数初始化的list进行循环顺序拼接.  详细代码在test中. 图中分别是 1万和100万的测试数据. 100w的测试中没使用字符串拼接, 太慢了.   在比较中发现StringBuffer会比StringBuilder多近一倍的内存占用.原因是因为Str">
+<meta name="keywords" content="java,String,StringBuffer,StringBuilder">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在VPS上搭建ss或v2ray">
-<meta property="og:url" content="http://yoursite.com/post/52793.html">
+<meta property="og:title" content="String, StringBuffer, StringBuilder测试">
+<meta property="og:url" content="http://yoursite.com/post/516d2f4f.html">
 <meta property="og:site_name" content="Shotacon">
-<meta property="og:description" content="ss当初购买的是vultr的服务器, 系统为CentOs7 X64v2ray是用的Google Cloud, 俗称GCP, 系统同为CentOs7 X64">
+<meta property="og:description" content="测试String, StringBuffer, StringBuilder的拼接速度, 内存使用情况比较. 测试采用随机数拼接, 指定数量的随机数初始化的list进行循环顺序拼接.  详细代码在test中. 图中分别是 1万和100万的测试数据. 100w的测试中没使用字符串拼接, 太慢了.   在比较中发现StringBuffer会比StringBuilder多近一倍的内存占用.原因是因为Str">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-22T06:29:47.839Z">
+<meta property="og:image" content="https://dev.tencent.com/u/shotaconXD/p/Test/git/raw/master/Nebula-web/src/test/java/stringtest/10000.png">
+<meta property="og:image" content="https://dev.tencent.com/u/shotaconXD/p/Test/git/raw/master/Nebula-web/src/test/java/stringtest/1000000.png">
+<meta property="og:updated_time" content="2019-03-27T02:36:20.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在VPS上搭建ss或v2ray">
-<meta name="twitter:description" content="ss当初购买的是vultr的服务器, 系统为CentOs7 X64v2ray是用的Google Cloud, 俗称GCP, 系统同为CentOs7 X64">
+<meta name="twitter:title" content="String, StringBuffer, StringBuilder测试">
+<meta name="twitter:description" content="测试String, StringBuffer, StringBuilder的拼接速度, 内存使用情况比较. 测试采用随机数拼接, 指定数量的随机数初始化的list进行循环顺序拼接.  详细代码在test中. 图中分别是 1万和100万的测试数据. 100w的测试中没使用字符串拼接, 太慢了.   在比较中发现StringBuffer会比StringBuilder多近一倍的内存占用.原因是因为Str">
+<meta name="twitter:image" content="https://dev.tencent.com/u/shotaconXD/p/Test/git/raw/master/Nebula-web/src/test/java/stringtest/10000.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/post/52793.html">
+  <link rel="canonical" href="http://yoursite.com/post/516d2f4f.html">
 
 
 
@@ -143,7 +146,7 @@
   };
 </script>
 
-  <title>在VPS上搭建ss或v2ray | Shotacon</title>
+  <title>String, StringBuffer, StringBuilder测试 | Shotacon</title>
   
 
 
@@ -369,7 +372,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/52793.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/516d2f4f.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shotacon">
@@ -386,7 +389,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在VPS上搭建ss或v2ray
+          <h1 class="post-title" itemprop="name headline">String, StringBuffer, StringBuilder测试
               
             
           </h1>
@@ -411,46 +414,16 @@
                 
               
 
-              <time title="Created: 2017-12-01 19:22:50" itemprop="dateCreated datePublished" datetime="2017-12-01T19:22:50+08:00">2017-12-01</time>
+              <time title="Created: 2019-03-27 10:30:25 / Modified: 10:36:20" itemprop="dateCreated datePublished" datetime="2019-03-27T10:30:25+08:00">2019-03-27</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-12-22 14:29:47" itemprop="dateModified" datetime="2018-12-22T14:29:47+08:00">2018-12-22</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/梯子/" itemprop="url" rel="index"><span itemprop="name">梯子</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -460,8 +433,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/post/52793.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/post/52793.html" itemprop="commentCount"></span>
+                <a href="/post/516d2f4f.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/post/516d2f4f.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -469,7 +442,7 @@
 
           
           
-             <span id="/post/52793.html" class="leancloud_visitors" data-flag-title="在VPS上搭建ss或v2ray">
+             <span id="/post/516d2f4f.html" class="leancloud_visitors" data-flag-title="String, StringBuffer, StringBuilder测试">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -500,40 +473,14 @@
       
 
       
-        <p>ss当初购买的是<a href="https://www.vultr.com/" target="_blank" rel="noopener">vultr</a>的服务器, 系统为CentOs7 X64<br>v2ray是用的Google Cloud, 俗称GCP, 系统同为CentOs7 X64</p>
-<a id="more"></a>
-<h2><span id="ss">ss</span></h2><p>一般linux都会带python, 就不写怎么安装了.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 使用pip安装shadowsocks</span><br><span class="line">pip install shadowsocks</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 创建并编辑配置</span><br><span class="line">mkdir /etc/shadowsocks</span><br><span class="line">vim /etc/shadowsocks/config.json</span><br><span class="line"><span class="meta">#</span> 添加配置(多端口)</span><br><span class="line">&#123;</span><br><span class="line"> "server":"VPS的外网IP地址",</span><br><span class="line"> "local_address":"127.0.0.1", # 本地代理地址, 默认就好</span><br><span class="line"> "local_port":1080, # 本地代理端口</span><br><span class="line"> "port_password":</span><br><span class="line"> &#123;</span><br><span class="line">  "端口1":"密码1",</span><br><span class="line">  "端口2":"密码2",</span><br><span class="line">  "端口3":"密码3"</span><br><span class="line"> &#125;,</span><br><span class="line"> "timeout":300, # 超时时间</span><br><span class="line"> "method":"aes-256-cfb", # 加密算法</span><br><span class="line"> "fast_open":false</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 启动方式</span><br><span class="line">ssserver -c /etc/shadowsocks/config.json -d start 后台启动</span><br><span class="line">ssserver -c /etc/shadowsocks/config.json -d stop 后台停止</span><br></pre></td></tr></table></figure>
-<h2><span id="v2ray">v2ray</span></h2><p>官网地址: <a href="https://www.v2ray.com" target="_blank" rel="noopener">https://www.v2ray.com</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 执行shell脚本即可, 一键安装</span><br><span class="line">bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure></p>
-<p>此脚本会自动安装以下文件: </p>
-<ul>
-<li>/usr/bin/v2ray/v2ray：V2Ray 程序；</li>
-<li>/usr/bin/v2ray/v2ctl：V2Ray 工具；</li>
-<li>/etc/v2ray/config.json：配置文件；</li>
-<li>/usr/bin/v2ray/geoip.dat：IP 数据文件</li>
-<li>/usr/bin/v2ray/geosite.dat：域名数据文件</li>
-</ul>
-<p>此脚本会配置自动运行脚本. 自动运行脚本会在系统重启之后, 自动运行 V2Ray.<br>目前自动运行脚本只支持带有 Systemd 的系统, 以及 Debian / Ubuntu 全系列.</p>
-<p>运行脚本位于系统的以下位置: </p>
-<ul>
-<li>/etc/systemd/system/v2ray.service: Systemd</li>
-<li>/etc/init.d/v2ray: SysV</li>
-</ul>
-<p>脚本运行完成后，你需要：</p>
-<ol>
-<li>编辑 /etc/v2ray/config.json 文件来配置你需要的代理方式；</li>
-<li>运行 service v2ray start 来启动 V2Ray 进程；</li>
-<li>之后可以使用 service v2ray start|stop|status|reload|restart|force-reload 控制 V2Ray 的运行。</li>
-</ol>
-<h2><span id="tcp加速">TCP加速</span></h2><h5><span id="google-bbr是一种新兴的tcp单边加速方案-建议开启bbr加速算法">Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法</span></h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
-<h2><span id="其他注意事项">其他注意事项</span></h2><ol>
-<li>如果用的是像阿里云, Google Cloud, 腾讯云, AWS等云平台, 记得开放端口.</li>
-<li><p>如果你的镜像里没有pip, 但是有python, 那就装一个. </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 如果连wget都没有, 像Google Cloud提供的CentOS就比较干净.</span><br><span class="line">yum install wget</span><br><span class="line">wget https://bootstrap.pypa.io/get-pip.py</span><br><span class="line">python get-pip.py</span><br><span class="line"><span class="meta">#</span> 如果连python都没有, 百度吧</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>端口个数看使用情况定, 通常来说几个人用就开几个端口.</p>
-</li>
-</ol>
+        <h2><span id="测试string-stringbuffer-stringbuilder的拼接速度-内存使用情况比较">测试String, StringBuffer, StringBuilder的拼接速度, 内存使用情况比较.</span></h2><blockquote>
+<p>测试采用随机数拼接, 指定数量的随机数初始化的list进行循环顺序拼接.</p>
+</blockquote>
+<p>详细代码在<a href="https://dev.tencent.com/u/shotaconXD/p/Test/git" target="_blank" rel="noopener">test</a>中.</p>
+<p>图中分别是 1万和100万的测试数据. 100w的测试中没使用字符串拼接, 太慢了.</p>
+<p><img src="https://dev.tencent.com/u/shotaconXD/p/Test/git/raw/master/Nebula-web/src/test/java/stringtest/10000.png" alt=""></p>
+<p><img src="https://dev.tencent.com/u/shotaconXD/p/Test/git/raw/master/Nebula-web/src/test/java/stringtest/1000000.png" alt=""></p>
+<p>在比较中发现StringBuffer会比StringBuilder多近一倍的内存占用.</p><p><br>原因是因为StringBuffer在对象实例内会存有toString的缓存, 详情参考<a href="https://dev.tencent.com/u/shotaconXD/p/Test/git/blob/master/Nebula-web/src/test/java/stringtest/bufferInfo.txt" target="_blank" rel="noopener">bufferInfo.txt</a>文件第八行. </p><p><br>这个改动是1.8新增的, 所以在1.7及以前是没有的. 不过不用担心, 该变量不参与序列化.</p><p><br>具体就是在toString的时候会生成一个cache数组, 作为缓存使用.</p><p><br>所以在非多线程环境中, 尽(必)量(须)使用StringBuilder作为字符串拼接工具.</p><p></p>
 
       
     </div>
@@ -557,9 +504,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/shadowsocks/" rel="tag"># shadowsocks</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
-            <a href="/tags/v2ray/" rel="tag"># v2ray</a>
+            <a href="/tags/String/" rel="tag"># String</a>
+          
+            <a href="/tags/StringBuffer/" rel="tag"># StringBuffer</a>
+          
+            <a href="/tags/StringBuilder/" rel="tag"># StringBuilder</a>
           
         </div>
       
@@ -572,15 +523,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/post/44e3c230.html" rel="next" title="Java常见面试题">
+                <i class="fa fa-chevron-left"></i> Java常见面试题
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/post/56550.html" rel="prev" title="TCP的几种状态(笔记)">
-                TCP的几种状态(笔记) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -815,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">ss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">v2ray</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">TCP加速</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">Google BBR是一种新兴的TCP单边加速方案, 建议开启BBR加速算法</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">其他注意事项</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">测试String, StringBuffer, StringBuilder的拼接速度, 内存使用情况比较.</span></a></li></ol></div>
             
 
           </div>
