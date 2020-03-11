@@ -123,13 +123,13 @@
 <meta property="og:site_name" content="Shotacon">
 <meta property="og:description" content="一. 事故概述春节期间, 生产系统多次出现假死不可用现象, 导致绝大部分业务无法进行. 主要表现现象为接口无法访问. 背景为900W+客户表和近实时ES, 以及春节期间疫情导致的普通卖菜场景近似秒杀等.">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://fa.shotacon.top/directlink/images/blog/1.png">
-<meta property="og:image" content="http://fa.shotacon.top/directlink/images/blog/3.png">
-<meta property="og:updated_time" content="2020-03-11T07:29:22.660Z">
+<meta property="og:image" content="https://i.loli.net/2020/03/11/JFO1cxjqVRWD3Yv.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/11/XpkVtfnD5SYcFKa.png">
+<meta property="og:updated_time" content="2020-03-11T08:36:41.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次生产事故的排查和解决">
 <meta name="twitter:description" content="一. 事故概述春节期间, 生产系统多次出现假死不可用现象, 导致绝大部分业务无法进行. 主要表现现象为接口无法访问. 背景为900W+客户表和近实时ES, 以及春节期间疫情导致的普通卖菜场景近似秒杀等.">
-<meta name="twitter:image" content="http://fa.shotacon.top/directlink/images/blog/1.png">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/11/JFO1cxjqVRWD3Yv.png">
 
 
 
@@ -414,7 +414,7 @@
                 
               
 
-              <time title="Created: 2020-03-11 15:29:22" itemprop="dateCreated datePublished" datetime="2020-03-11T15:29:22+08:00">2020-03-11</time>
+              <time title="Created: 2020-03-11 16:36:41" itemprop="dateCreated datePublished" datetime="2020-03-11T16:36:41+08:00">2020-03-11</time>
             
 
             
@@ -490,8 +490,8 @@
         <h2><span id="一-事故概述">一. 事故概述</span></h2><p>春节期间, 生产系统多次出现假死不可用现象, 导致绝大部分业务无法进行. 主要表现现象为接口无法访问.</p>
 <p>背景为900W+客户表和近实时ES, 以及春节期间疫情导致的普通卖菜场景近似秒杀等.<br><a id="more"></a></p>
 <h2><span id="二-排查过程">二. 排查过程</span></h2><p>优先排查了info, error, catalina日志, 发现以下异常: </p>
-<p><img src="http://fa.shotacon.top/directlink/images/blog/1.png" alt="图1"></p>
-<p><img src="http://fa.shotacon.top/directlink/images/blog/3.png" alt="图2"></p>
+<p><img src="https://i.loli.net/2020/03/11/JFO1cxjqVRWD3Yv.png" alt="1.png"></p>
+<p><img src="https://i.loli.net/2020/03/11/XpkVtfnD5SYcFKa.png" alt="3.png"></p>
 <p>主要的异常信息为:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cause: java.sql.SQLException: Lock wait timeout exceeded; </span><br><span class="line">try restarting transaction</span><br></pre></td></tr></table></figure></p>
 <p>引起该异常通常是由高频行锁或表锁同时操作数据库导致. 上一次事务还未完成, 新的事务尝试获取锁等待超时.</p>
 <p>但根本原因是业务涉及缺陷或代码不合理导致的事务无法正常提交或事务体执行时间过长. 引起获取锁等待超时.</p>
@@ -560,6 +560,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/82537ad4.html" rel="prev" title="记一次因连接池泄漏导致的生产事故">
+                记一次因连接池泄漏导致的生产事故 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
